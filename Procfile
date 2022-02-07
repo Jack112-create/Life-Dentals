@@ -1,1 +1,1 @@
-web: gunicorn lifedentals.wgi
+web: gunicorn lifedentals.wsgi
