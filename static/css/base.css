@@ -40,6 +40,8 @@ body {
 .nav-link a {
     color: white;
     text-decoration: none;
+    position: relative;
+    transition: all .5s;
 }
 
 .nav-links {
@@ -63,11 +65,6 @@ body {
 
 nav ul li a:hover {
   color: rgb(62, 140, 143);
-}
-
-.nav-link a {
-    position: relative;
-    transition: all .5s;
 }
 
 /* Nav link hover effect from Code Pen */
