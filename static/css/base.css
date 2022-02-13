@@ -6,6 +6,7 @@
 
 body {
     color: white;
+    font-size: 10px;
 }
 
 .container {
@@ -33,9 +34,10 @@ body {
     background: transparent;
     color: white;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
-a {
+.nav-link a {
     color: white;
     text-decoration: none;
 }
@@ -45,7 +47,6 @@ a {
 }
 
 .nav-open {
-    height: 100vh;
     display: block;
 }
 
@@ -55,8 +56,37 @@ a {
     text-align: center;
 }
 
-.nav-link a:hover{
-    border-bottom: 1px solid white;
+.nav-link a,
+.nav-link a:after {
+  transition: all .5s;
+}
+
+nav ul li a:hover {
+  color: rgb(62, 140, 143);
+}
+
+.nav-link a {
+    position: relative;
+    transition: all .5s;
+}
+
+/* Nav link hover effect from Code Pen */
+.nav-link a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+/* Ends */
+
+.nav-link a:hover:after {
+  width: 100%;
 }
 
 @media only screen and (min-width: 750px) {
