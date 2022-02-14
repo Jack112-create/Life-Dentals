@@ -14,17 +14,16 @@
     --ui-orange: #F6B002;
 }
 
-body {
-    color: white;
-}
 
 html {
     font-size: 10px;
 }
 
 .container {
-    padding: 20px 40px;
+    padding: 2rem;
     width: 100%;
+    background-color: var(--ui-blue);
+    color: var(--ui-grey);
 }
 
 .flex-nav {
@@ -45,16 +44,15 @@ html {
 .nav-toggle {
     border: transparent;
     background: transparent;
-    color: white;
     font-size: 1.5rem;
     cursor: pointer;
 }
 
 .nav-link a {
-    color: white;
     text-decoration: none;
     position: relative;
     transition: all .5s;
+    color: var(--ui-grey);
 }
 
 .nav-links {
@@ -77,7 +75,7 @@ html {
 }
 
 nav ul li a:hover {
-  color: rgb(62, 140, 143);
+  color: var(--ui-light-grey);
 }
 
 /* Nav link hover effect from Code Pen */
@@ -90,7 +88,7 @@ nav ul li a:hover {
   width: 0%;
   content: '';
   color: transparent;
-  background: #aaa;
+  background: var(--ui-orange);
   height: 1px;
 }
 /* Ends */
