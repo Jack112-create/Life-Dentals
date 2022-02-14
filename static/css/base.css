@@ -4,8 +4,21 @@
     box-sizing: border-box;
 }
 
+:root {
+    --ui-blue: #30C9E8;
+    --ui-grey: #3B4A4D;
+    --ui-light-grey: #F7F8FA;
+    --ui-white: #FFFFFF;
+    --ui-red: #FF4431;
+    --ui-green: #50CB9D;
+    --ui-orange: #F6B002;
+}
+
 body {
     color: white;
+}
+
+html {
     font-size: 10px;
 }
 
