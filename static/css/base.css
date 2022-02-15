@@ -21,7 +21,7 @@ html {
 }
 
 body {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Assistant', sans-serif;
 }
 
 .container {
@@ -105,6 +105,36 @@ nav ul li a:hover {
 
 #navbar-brand {
     font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.footer {
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--ui-blue);
+    color: var(--ui-grey);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+
+.phone-info {
+    margin-bottom: 1rem;
+}
+
+#contact-heading, #opening-header  {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.contact-number, .phone-icon {
+    font-size: 1.5rem;
+}
+
+.times {
+    font-size: 1.5rem;
+    display: block;
 }
 
 @media only screen and (min-width: 750px) {
