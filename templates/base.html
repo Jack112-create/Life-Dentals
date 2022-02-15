@@ -45,15 +45,25 @@
                 </ul>
             </div>
         </div>
-
-
-        <!-- <div class="hamburger">
-            <i class="fas fa-bars"></i>
-        </div> -->
     </nav>
     {% block content %}
 
     {% endblock content %}
+    <footer class="footer">
+        <h4 id="contact-heading">Contact Us</h4>
+        
+       <div class="conact-info">
+           <div class="phone-info">
+               <i class="fas fa-phone"></i>
+               <span>777 - 78983461</span>
+            </div>
+            <div class="opening-hours">
+                <h5 id="opening-header">Opening Hours</h5>
+                <span class="times">Mon - Fri: 8am - 5pm</span>
+                <span class="times">Sat & Sun: 11am - 4pm</span>
+            </div>
+       </div> 
+    </footer>
     <script src="{% static 'js/nav.js' %}"></script>
 </body>
 </html>
