@@ -1,0 +1,25 @@
+{
+  "name": "life-dentals",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jack112-create/Life-Dentals.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jack112-create/Life-Dentals/issues"
+  },
+  "homepage": "https://github.com/Jack112-create/Life-Dentals#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
