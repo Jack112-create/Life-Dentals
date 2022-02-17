@@ -5,4 +5,4 @@ def home(request):
     """
     Renders the main base.html template
     """
-    return render(request, 'base.html')
+    return render(request, 'clinic/homepage.html')

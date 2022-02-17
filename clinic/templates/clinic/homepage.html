@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block cssfile %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock cssfile %}
+
+{% block content %}
+
+<header id="header">
+    <div class="header-heading">
+        <h1>Look Your Best</h1>
+    </div>
+    <div class="header-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos vel mollitia fugit dolor laudantium dicta.</p>
+        <a href="#" class="appointment-link">Make An Appointment</a>
+    </div>
+</header>
+
+{% endblock content %}
