@@ -1,0 +1,61 @@
+:root {
+    --ui-blue: #30C9E8;
+    --ui-grey: #3B4A4D;
+    --ui-light-grey: #F7F8FA;
+    --ui-white: #FFFFFF;
+    --ui-red: #FF4431;
+    --ui-green: #50CB9D;
+    --ui-orange: #F6B002;
+}
+
+#header {
+    background-image: url('../images/tools.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.header-container {
+    position: relative;
+}
+
+.header-container::before {
+    background: white;
+    width: .3rem;
+    content: '';
+    height: 100%;
+    position: absolute;
+    left: 0%;
+}
+
+.header-heading {
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.header-content {
+    padding: 1rem;
+}
+
+.header-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.appointment-link {
+    font-size: 1.3rem;
+    text-decoration: none;
+    background-color: var(--ui-grey);  
+    border-radius: 5px;
+    color: var(--ui-white);
+    padding: 1rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.appointment-link:hover {
+    color: var(--ui-orange);
+}
