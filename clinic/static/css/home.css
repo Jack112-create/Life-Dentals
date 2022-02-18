@@ -20,6 +20,7 @@
 
 .header-container {
     position: relative;
+    display: inline-block;
 }
 
 .header-container::before {
@@ -28,7 +29,7 @@
     content: '';
     height: 100%;
     position: absolute;
-    left: 0%;
+    left: 0;
 }
 
 .header-heading {
