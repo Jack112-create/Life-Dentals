@@ -36,10 +36,6 @@ body {
     flex-direction: column;
 }
 
-.navbar {
-    background-color: black;
-}
-
 .nav-header {
     display: flex;
     justify-content: space-between;
