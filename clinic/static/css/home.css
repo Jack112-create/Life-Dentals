@@ -21,6 +21,7 @@
 .header-container {
     position: relative;
     display: inline-block;
+    color: var(--ui-grey);
 }
 
 .header-container::before {
@@ -59,4 +60,38 @@
 
 .appointment-link:hover {
     color: var(--ui-orange);
+}
+
+/* Tablet styles */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+    #header {
+        text-align: left;
+        padding: 3rem;
+    }
+
+    .header-container {
+        padding-left: 2rem;
+    }
+
+    .header-content {
+        padding: 1rem 0;
+    }
+
+    .header-content p {
+        font-size: 2rem;
+        width: 250px;
+        text-align: justify;
+    }
+
+    .appointment-link {
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
 }
