@@ -162,6 +162,7 @@
 
     .employee {
         padding: 0 1rem;
+        max-width: 300px;
     }
 
 }
@@ -205,6 +206,25 @@
         font-size: 3rem;
     }
 
+    .dental-team {
+        padding: 8rem 0;
+    }
+
+    .employee-name {
+        font-size: 2rem;
+    }
+
+    .employee-title {
+        font-size: 1.8rem;
+    }
+
+    .employee-description {
+        font-size: 1.5rem;
+    }
+
+    .tooth {
+        font-size: 1.5rem;
+    }
 }
 
 
@@ -226,4 +246,17 @@
     .home-heading {
         font-size: 3.5rem;
     }
+
+    .employee-name {
+        font-size: 2.5rem;
+    }
+
+    .employee-title {
+        font-size: 2rem;
+    }
+
+    .employee-description {
+        font-size: 1.7rem;
+    }
+
 }
