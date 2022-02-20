@@ -94,6 +94,31 @@
     font-size: 1.2rem;
 }
 
+
+.dental-team {
+    padding: 1rem 2rem;
+}
+
+.tooth {
+   visibility: hidden;
+}
+
+
+.employee-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+}
+
+.employee-title {
+    font-size: 1.5rem;
+}
+
+.employee-description {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+
 /* Tablet styles */
 @media only screen and (min-width: 768px) {
 
