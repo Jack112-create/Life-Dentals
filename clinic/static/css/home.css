@@ -97,6 +97,10 @@
 /* Tablet styles */
 @media only screen and (min-width: 768px) {
 
+    .home-content {
+        margin-bottom: 3rem;
+    }
+
     .home-heading {
         margin-bottom: 3rem;
     }
