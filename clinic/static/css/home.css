@@ -103,11 +103,12 @@
 
     .cards {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
     }
 
     .card {
-        margin: 0;
+        width: 350px;
+        margin: 0 2rem;
     }
 
     .about, .services {
