@@ -145,6 +145,25 @@
         top: 30px;
     }
 
+    .dental-team {
+        margin-top: 7rem;
+        padding: 3rem 0;
+    }
+
+    .employees {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .tooth {
+        visibility: visible;
+        font-size: 1.3rem;
+    }
+
+    .employee {
+        padding: 0 1rem;
+    }
+
 }
 
 /* Desktop styles */

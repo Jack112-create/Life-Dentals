@@ -163,6 +163,11 @@ nav ul li a:hover {
     .nav-link {
         margin: 0.5rem;
     }
+
+    .contact-info {
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
 /* Desktop styles */
@@ -173,11 +178,6 @@ nav ul li a:hover {
 
     #contact-heading {
         margin-bottom: 1rem;
-    }
-
-    .contact-info {
-        display: flex;
-        justify-content: space-around;
     }
 
     .phone-info {
