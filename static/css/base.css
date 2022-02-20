@@ -177,7 +177,7 @@ nav ul li a:hover {
 
     .contact-info {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     .phone-info {
