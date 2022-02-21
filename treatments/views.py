@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def treatments(request):
+    """
+    Renders the treatments page
+    """
+    return render(request, 'treatments/treatments.html')
