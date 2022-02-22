@@ -2,4 +2,14 @@
 
 {% block content %}
     <h1>Treatments Page</h1>
+
+    {% for treatment in treatments %}
+
+    <p>{{ treatment.treatment }}</p>
+    <p>{{ treatment.description }}</p>
+    <p>{{ treatment.price }}</p>
+    <p>{{ treatment.duration }}</p>
+
+    {% endfor %}
+
 {% endblock content %}

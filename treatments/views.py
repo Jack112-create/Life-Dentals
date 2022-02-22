@@ -1,8 +1,15 @@
 from django.shortcuts import render
-
+from .models import Treatment
 
 def treatments(request):
     """
     Renders the treatments page
     """
-    return render(request, 'treatments/treatments.html')
+
+    treatments = Treatment.objects.all()
+
+    context = {
+        'treatments': treatments
+    }
+
+    return render(request, 'treatments/treatments.html', context)
