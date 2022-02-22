@@ -1,5 +1,5 @@
 from django.db import models
-
+from cloudinary.models import CloudinaryField
 
 class Treatment(models.Model):
     treatment = models.CharField(max_length=200, primary_key=True)
