@@ -1,16 +1,32 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
+{% block cssfile %}
+<link rel="stylesheet" href="{% static 'css/treatments.css' %}">
+{% endblock cssfile %}
+
 {% block content %}
-    <h1>Treatments Page</h1>
 
-    {% for treatment in treatments %}
-
-    <p>{{ treatment.treatment }}</p>
-    <p>{{ treatment.description }}</p>
-    <p>{{ treatment.price }}</p>
-    <p>{{ treatment.duration }}</p>
-    <img src="{{ treatment.treatment_image.url }}" alt="" />
-
-    {% endfor %}
+<header class="treatments-header">
+    <h1 id="treatments-heading">Treatments</h1>
+</header>
+<main>
+    <section class="treatments">
+        {% for treatment in treatments %}
+        <div class="treatment">
+            <div class="treatment-hero">
+                <img class="treatment-image" src="{{ treatment.treatment_image.url }}" alt="" />
+            </div>
+            <div class="treatment-text">
+                <h2>{{ treatment.treatment }}</h2>
+                <p>{{ treatment.description }}</p>
+                <span>{{ treatment.price }}</span>
+                <span>{{ treatment.duration }}</span>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+</main>
 
 {% endblock content %}
