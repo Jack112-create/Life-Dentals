@@ -56,10 +56,49 @@
     font-weight: bold;
 }
 
+.testimonials {
+    padding: 2rem;
+    text-align: center;
+}
+
+#testimonials-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.testimonial {
+    position: relative;
+}
+
+.testimonial-text, .testimonial-person {
+    font-size: 1.5rem;
+}
+
+.testimonial-text {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.left-arrow, .right-arrow {
+    position: absolute;
+    top: 30%;
+    font-size: 2rem;
+}
+
+.left-arrow {
+    left: 20%;
+}
+
+.right-arrow {
+    right: 20%;
+}
+
 /* Tablet styles */
 @media only screen and (min-width: 768px) {
     .treatment {
         display: flex;
+        margin: 2.5rem;
     }
 
     .treatment-hero {
