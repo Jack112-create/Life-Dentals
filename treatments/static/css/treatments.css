@@ -30,6 +30,7 @@
 .treatment h2 {
     margin-bottom: 1rem;
     font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
 }
 
 .treatment-text {
@@ -71,5 +72,17 @@
 
     .treatment-image {
         height: 100%;
+    }
+
+    #treatments-heading  {
+        font-size: 3rem;
+    }
+
+    .treatment h2 {
+        font-size: 2rem;
+    }
+
+    .treatment-text {
+        font-size: 1.8rem;
     }
 }
