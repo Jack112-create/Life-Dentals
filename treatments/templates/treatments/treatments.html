@@ -8,11 +8,13 @@
 
 {% block content %}
 
-<header class="treatments-header">
-    <h1 id="treatments-heading">Treatments</h1>
-</header>
 <main>
     <section class="treatments">
+
+        <header class="treatments-header">
+            <h1 id="treatments-heading">Treatments</h1>
+        </header>
+
         {% for treatment in treatments %}
         <div class="treatment">
             <div class="treatment-hero">
@@ -21,8 +23,10 @@
             <div class="treatment-text">
                 <h2>{{ treatment.treatment }}</h2>
                 <p>{{ treatment.description }}</p>
-                <span>{{ treatment.price }}</span>
-                <span>{{ treatment.duration }}</span>
+                <div class="treatment-info"> 
+                    <span class="treatment-price">€{{ treatment.price }}</span>
+                    <span class="treatment-duration">{{ treatment.duration }}</span>
+                </div>
             </div>
         </div>
         {% endfor %}
