@@ -17,6 +17,23 @@
 
         {% for treatment in treatments %}
         <div class="treatment">
+
+            {% if  forloop.counter0|divisibleby:2   %}
+
+            <div class="treatment-text">
+                <h2>{{ treatment.treatment }}</h2>
+                <p>{{ treatment.description }}</p>
+                <div class="treatment-info"> 
+                    <span class="treatment-price">€{{ treatment.price }}</span>
+                    <span class="treatment-duration">{{ treatment.duration }}</span>
+                </div>
+            </div>
+            <div class="treatment-hero">
+                <img class="treatment-image" src="{{ treatment.treatment_image.url }}" alt="" />
+            </div>
+            
+            {% else %}
+
             <div class="treatment-hero">
                 <img class="treatment-image" src="{{ treatment.treatment_image.url }}" alt="" />
             </div>
@@ -28,6 +45,8 @@
                     <span class="treatment-duration">{{ treatment.duration }}</span>
                 </div>
             </div>
+         
+            {% endif %}
         </div>
         {% endfor %}
     </section>
