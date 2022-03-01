@@ -1,0 +1,56 @@
+:root {
+    --ui-blue: #30C9E8;
+    --ui-grey: #3B4A4D;
+    --ui-light-grey: #F7F8FA;
+    --ui-white: #FFFFFF;
+    --ui-red: #FF4431;
+    --ui-green: #50CB9D;
+    --ui-orange: #F6B002;
+}
+
+
+.treatments {
+    text-align: center;
+    padding: 2rem;
+    color: var(--ui-grey);
+}
+
+#treatments-heading {
+    font-size: 2rem;
+    border-bottom: 0.2rem solid black;
+    display: inline;
+    font-family: 'Oswald', sans-serif;
+}
+
+.treatment {
+    border: 0.1rem solid black;
+    margin: 1.5rem 0;
+}
+
+.treatment h2 {
+    margin-bottom: 1rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.treatment-text {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.treatment-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.treatment-info {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    background-color: lightblue;
+    padding: 0.5rem;
+    color: black;
+    font-weight: bold;
+}
