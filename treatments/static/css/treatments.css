@@ -59,6 +59,7 @@
 .testimonials {
     padding: 2rem;
     text-align: center;
+    display: none;
 }
 
 #testimonials-heading {
@@ -140,4 +141,42 @@
     .treatment-text {
         font-size: 1.8rem;
     }
+
+    .testimonials {
+        display: block;
+    }
+
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+
+    .treatments-header  {
+        padding: 2rem 0;
+    }
+
+    #treatments-heading  {
+        font-size: 4rem;
+    }
+
+    .treatment h2 {
+        font-size: 3rem;
+    }
+
+    .treatment-text {
+        font-size: 2rem;
+    }
+
+    .testimonials {
+        display: block;
+    }
+
+    #testimonials-heading {
+        font-size: 2.5rem;
+    }
+
+    .testimonial-text, .testimonial-person {
+        font-size: 2rem;
+    }
+
 }
