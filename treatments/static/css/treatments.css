@@ -80,18 +80,34 @@
     margin: 0 auto;
 }
 
+
+.testimonial-content {
+    display: none;
+}
+
+.show-testimonial {
+    display: block;
+}
+
 .left-arrow, .right-arrow {
+    padding: 1rem;
     position: absolute;
-    top: 30%;
+    top: 25%;
     font-size: 2rem;
 }
 
+.left-arrow:hover, .right-arrow:hover {
+    background-color: var(--ui-orange);
+    border: 0.1rem solid var(--ui-grey);
+    border-radius: 50%;
+}
+
 .left-arrow {
-    left: 20%;
+    left: 15%;
 }
 
 .right-arrow {
-    right: 20%;
+    right: 15%;
 }
 
 /* Tablet styles */
