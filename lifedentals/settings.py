@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'clinic',
     'treatments',
+    'booking',
 ]
 
 MIDDLEWARE = [
