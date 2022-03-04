@@ -34,3 +34,8 @@ def loginUser(request):
     }
 
     return render(request, 'users/login_register.html', context)
+
+def logoutUser(request):
+    logout(request)
+    messages.success(request, 'Logout successful!')
+    return redirect('login')
