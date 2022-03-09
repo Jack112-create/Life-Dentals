@@ -35,11 +35,16 @@
 
 .form-button {
     width: 100%;
-    padding: 0.5rem 0;
+    padding: 1rem 0;
     margin-bottom: 1.5rem;
+    border: 0.2rem solid var(--ui-blue);
+    background-color: var(--ui-grey);
+    color: var(--ui-white);
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
-.testing {
+.login-form p {
     font-size: 1.5rem;
 }
 
@@ -49,3 +54,17 @@
     text-decoration: none;
 }
 
+
+@media only screen and (min-width: 768px) {
+    .login-header {
+        font-size: 3rem;
+    }
+
+    .form-input {
+        width: 300px;
+    }
+
+    .login-form p {
+        font-size: 2rem;
+    }
+}
