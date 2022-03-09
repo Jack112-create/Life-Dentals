@@ -1,0 +1,51 @@
+:root {
+    --ui-blue: #30C9E8;
+    --ui-grey: #3B4A4D;
+    --ui-light-grey: #F7F8FA;
+    --ui-white: #FFFFFF;
+    --ui-red: #FF4431;
+    --ui-green: #50CB9D;
+    --ui-orange: #F6B002;
+}
+
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin-top: 8rem;
+    text-align: center;
+}
+
+.form-input {
+    display: block;
+    margin: 2rem 0;
+    padding: 1rem;
+    width: 100%;
+}
+
+.login-header h1 {
+    font-family: 'Oswald', sans-serif;
+}
+
+.login-header {
+    font-size: 2rem;
+}
+
+.form-button {
+    width: 100%;
+    padding: 0.5rem 0;
+    margin-bottom: 1.5rem;
+}
+
+.testing {
+    font-size: 1.5rem;
+}
+
+.sign-up-link {
+    color: var(--ui-blue);
+    font-weight: bold;
+    text-decoration: none;
+}
+

@@ -8,25 +8,40 @@
 
 {% block content %}
 
-<h1>Login Page</h1>
-
 {% if page == 'login' %}
-<form method="POST" action="{% url 'login' %}">
-    {% csrf_token %}
-    <input type="text" name="username" placeholder="Username">
-    <input type="password" name="password" placeholder="Enter password">
-    <input type="submit" value="Login">
 
-    <p>Don't have an account? <a href="{% url 'register' %}">Sign Up</a></p>
-</form>
+<div class="login-form">
+    <div class="login-header">
+        <i class="fas fa-user user-icon"></i>
+        <h1>Sign into your account</h1>
+    </div>  
+
+    <section class="form">
+        <form method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            <input type="text" class="form-input" name="username" placeholder="Username">
+            <input type="password" class="form-input" name="password" placeholder="Enter password">
+            <input type="submit" class="form-button" value="Login">
+
+            <p class="testing">Don't have an account? <a class="sign-up-link" href="{% url 'register' %}">Sign Up</a></p>
+    </form>
+    </section>
+</div>
 {% else %}
 
-<form action="{% url 'register' %}" method="POST">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Register">
-    <p>Already have an account? <a href="{% url 'login' %}">Sign In</a></p>
-</form>
+<div class="sign-up-form">
+    <i class="fas fa-user user-icon"></i>
+    <h1>Create an account</h1>
+</div>
+
+<section class="form">
+    <form action="{% url 'register' %}" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input class="form-button" type="submit" value="Register">
+        <p>Already have an account? <a class="sign-in-link" href="{% url 'login' %}">Sign In</a></p>
+    </form>
+</section>
 {% endif %}
 
 {% endblock content %}
