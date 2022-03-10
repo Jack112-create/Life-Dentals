@@ -30,18 +30,20 @@
 {% else %}
 
 <div class="sign-up-form">
-    <i class="fas fa-user user-icon"></i>
-    <h1>Create an account</h1>
-</div>
+    <div class="sign-up-header">
+        <i class="fas fa-user user-icon"></i>
+        <h1 >Create an account</h1>
+    </div>
 
-<section class="form">
-    <form action="{% url 'register' %}" method="POST">
-        {% csrf_token %}
-        {{ form }}
-        <input class="form-button" type="submit" value="Register">
-        <p>Already have an account? <a class="sign-in-link" href="{% url 'login' %}">Sign In</a></p>
-    </form>
-</section>
+    <section class="form">
+        <form action="{% url 'register' %}" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <input class="form-button" type="submit" value="Register">
+            <p>Already have an account? <a class="sign-in-link" href="{% url 'login' %}">Sign In</a></p>
+        </form>
+    </section>
+</div>
 {% endif %}
 
 {% endblock content %}
