@@ -18,7 +18,14 @@
     text-align: center;
 }
 
-.form-input {
+.sign-up-form label {
+    display: block;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+input[type=text], input[type=password], input[type=email] {
     display: block;
     margin: 2rem 0;
     padding: 1rem;
@@ -29,7 +36,7 @@
     font-family: 'Oswald', sans-serif;
 }
 
-.login-header {
+.login-header, .sign-up-header {
     font-size: 2rem;
 }
 
@@ -44,11 +51,15 @@
     cursor: pointer;
 }
 
-.login-form p {
+.login-form p, .sign-up-form p {
     font-size: 1.5rem;
 }
 
-.sign-up-link {
+.sign-up-form p {
+    padding-bottom: 4rem;
+}
+
+.sign-up-link, .sign-in-link {
     color: var(--ui-blue);
     font-weight: bold;
     text-decoration: none;
@@ -59,15 +70,11 @@
 }
 
 @media only screen and (min-width: 768px) {
-    .login-header {
+    .login-header, .sign-up-header {
         font-size: 3rem;
     }
 
-    .form-input {
-        width: 300px;
-    }
-
-    .login-form p {
+    .login-form p, .sign-up-form p {
         font-size: 2rem;
     }
 }
