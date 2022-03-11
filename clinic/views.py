@@ -3,6 +3,6 @@ from django.shortcuts import render
 
 def home(request):
     """
-    Renders the main base.html template
+    Renders the homepage template
     """
     return render(request, 'clinic/homepage.html')

@@ -7,6 +7,10 @@ from django.contrib import messages
 
 
 def loginUser(request):
+    """
+    Authenticate the user and then login the user
+    """
+
     page = 'login'
 
     if request.user.is_authenticated:
@@ -39,11 +43,20 @@ def loginUser(request):
     return render(request, 'users/login_register.html', context)
 
 def logoutUser(request):
+    """
+    Logs a user out
+    """
+
     logout(request)
     messages.success(request, 'Logout successful!')
     return redirect('login')
 
 def registerUser(request):
+    """
+    Register a user from form inputs
+    Login a user once form is valid
+    """
+
     page = 'register'
     form = CustomUserCreationForm()
 
