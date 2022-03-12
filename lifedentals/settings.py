@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'treatments',
     'booking',
     'users',
+    'contact',
 ]
 
 MIDDLEWARE = [
