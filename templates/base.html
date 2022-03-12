@@ -37,7 +37,7 @@
                         <a href="#">Booking</a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">Contact</a>
+                        <a href="{% url 'contact' %}">Contact</a>
                     </li>
                     {% if request.user.is_authenticated %}
                     <li class="nav-link">
