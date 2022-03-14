@@ -11,16 +11,25 @@
 <main>
     <div id="contact-form">
         <h1>Get in touch!</h1>
-        <form action="{% url 'contact' %}" method="POST">
+        <form action="{% url 'contact' %}" method="POST" onsubmit="return sendMail()" >
             {% csrf_token %}
             <label for="name" class="contact-label">Name:</label>
             <input type="text" id="name" name="name" placeholder="Your name" class="contact-input">
             <label for="email" class="contact-label">Email:</label>
             <input type="email" id="email" name="email" placeholder="Your email" class="contact-input">
-            <textarea name="message" rows="10" cols="30" placeholder="Enter your message here" class="contact-msg"></textarea>
+            <textarea id="message" name="message" rows="10" cols="30" placeholder="Enter your message here" class="contact-msg"></textarea>
             <input type="submit" value="Send" id="contact-submit">
         </form>
     </div>
 </main>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+(function() {
+emailjs.init("user_TJJYMaTD8WNx5eFtVAj2w");
+})();
+</script>
+
+<script src="{% static 'js/contact.js' %}"></script>
 
 {% endblock content %}
