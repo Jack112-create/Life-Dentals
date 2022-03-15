@@ -11,7 +11,7 @@
 <main>
     <div id="contact-form">
         <h1>Get in touch!</h1>
-        <form action="{% url 'contact' %}" method="POST" onsubmit="return sendMail()" >
+        <form>
             {% csrf_token %}
             <label for="name" class="contact-label">Name:</label>
             <input type="text" id="name" name="name" placeholder="Your name" class="contact-input">
