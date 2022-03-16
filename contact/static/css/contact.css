@@ -9,7 +9,7 @@ h1 {
     font-size: 2rem;
 }
 
-#contact-form form {
+#form-container form {
     display: flex;
     flex-direction: column;
     width: 80%;

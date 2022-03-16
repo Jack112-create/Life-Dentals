@@ -1,33 +1,32 @@
-const submitBtn = document.getElementById('contact-submit');
+(function() {
+    emailjs.init("user_TJJYMaTD8WNx5eFtVAj2w");
+})();
+
+const contactForm = document.getElementById('contact-form');
 
 function sendMail(e) {
+    console.log(e);
     e.preventDefault();
 
     const userName = document.getElementById('name');
     const userEmail = document.getElementById('email');
     const userMessage = document.getElementById('message');
 
-    const contactParams = {
-        from_name: userName.value,
-        from_email: userEmail.value,
-        message: userMessage.value
-    }
-
-    //  Send email with values from contact form
-    emailjs.send("service_covz2ff", "contact_form", contactParams)
-    .then(function(response) {
-       console.log('SUCCESS!', response.status, response.text);
+    // Sending email with values from each input field.
+    emailjs.sendForm("service_covz2ff", "contact_form", "#contact-form", "user_TJJYMaTD8WNx5eFtVAj2w")
+    .then(function(res) {
+        console.log('SUCCESS!', res);
     }, function(error) {
-       console.log('FAILED...', error);
+        console.log('FAILED...', error);
     });
 
     // Reset input values
     userName.value = '';
     userEmail.value = ''
     userMessage.value = '';
-    
+
 }
 
-submitBtn.addEventListener('click', (e) => {
+contactForm.addEventListener('submit', (e) => {
     sendMail(e);
-})
+});
