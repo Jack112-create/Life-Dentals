@@ -1,3 +1,13 @@
+:root {
+    --ui-blue: #30C9E8;
+    --ui-grey: #3B4A4D;
+    --ui-light-grey: #F7F8FA;
+    --ui-white: #FFFFFF;
+    --ui-red: #FF4431;
+    --ui-green: #50CB9D;
+    --ui-orange: #F6B002;
+}
+
 main {
     text-align: center;
     margin-top: 8rem;
@@ -43,4 +53,42 @@ h1 {
     color: var(--ui-white);
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+
+#form-modal {
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    color: var(--ui-white);
+}
+
+.modal-content {
+    position: relative;
+    background-color: var(--ui-grey);
+    margin: 15% auto;
+    padding: 2rem;
+    border: 1px solid var(--ui-blue);
+    width: 80%; 
+    font-size: 2rem;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    cursor: pointer;
+    color: var(--ui-white);
+}
+
+.close:hover {
+    color: var(--ui-red);
 }

@@ -3,6 +3,7 @@
 })();
 
 const contactForm = document.getElementById('contact-form');
+const closeBtn = document.getElementsByClassName('close')[0];
 
 function sendMail(e) {
     console.log(e);
@@ -16,8 +17,10 @@ function sendMail(e) {
     emailjs.sendForm("service_covz2ff", "contact_form", "#contact-form", "user_TJJYMaTD8WNx5eFtVAj2w")
     .then(function(res) {
         console.log('SUCCESS!', res);
+        formModal('success');
     }, function(error) {
         console.log('FAILED...', error);
+        formModal('fail');
     });
 
     // Reset input values
@@ -27,6 +30,32 @@ function sendMail(e) {
 
 }
 
+function formModal(formsuccess) {
+
+    const modalDiv = document.getElementById('form-modal');
+    const modalMessage = document.getElementsByClassName('modal-message')[0];
+    modalDiv.style.display = "block";
+
+    if (formsuccess === 'success') {
+        modalMessage.innerText = 'Thanks for getting in touch! We hope to get back to you as soon as possible!'
+    } else {
+        modalMessage.innerText = 'Oops! looks like there was an error. Try again.'
+    }
+
+}
+
+function closeModal() {
+    const modalDiv = document.getElementById('form-modal');
+
+    const modalMessage = document.getElementsByClassName('modal-message')[0];
+    modalMessage.innerText = ''
+
+    modalDiv.style.display = "none";
+
+}
+
 contactForm.addEventListener('submit', (e) => {
     sendMail(e);
 });
+
+closeBtn.addEventListener('click', closeModal);
