@@ -1,5 +1,5 @@
 (function() {
-    emailjs.init("user_TJJYMaTD8WNx5eFtVAj2w");
+    emailjs.init(config.USER_ID);
 })();
 
 const contactForm = document.getElementById('contact-form');
@@ -14,7 +14,7 @@ function sendMail(e) {
     const userMessage = document.getElementById('message');
 
     // Sending email with values from each input field.
-    emailjs.sendForm("service_covz2ff", "contact_form", "#contact-form", "user_TJJYMaTD8WNx5eFtVAj2w")
+    emailjs.sendForm(config.SERVICE_ID, config.TEMPLATE_ID, "#contact-form", config.USER_ID)
     .then(function(res) {
         console.log('SUCCESS!', res);
         formModal('success');
