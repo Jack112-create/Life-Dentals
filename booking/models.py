@@ -29,7 +29,7 @@ class Booking(models.Model):
     
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     treatments = models.CharField(max_length=15, choices=TREATMENTS_LIST)
-    booking_date = models.DateField(auto_now_add=False, auto_now=False, blank=True, null=True)
+    booking_date = models.DateField(auto_now_add=False, auto_now=False, blank=True, null=True, default=date.today)
     booking_time = models.CharField(max_length=50, choices=TIMESLOT_LIST, default=TIMESLOT_LIST[0][1])
 
     def __str__(self):
