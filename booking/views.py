@@ -5,7 +5,6 @@ from django.contrib import messages
 
 def booking(request):
     user = request.user
-    print(user)
     
     form = BookingForm()
     
@@ -13,17 +12,19 @@ def booking(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
 
+        # Get user selected time and date for booking
         selected_time = request.POST['booking_time']
         selected_date = request.POST['booking_date']
 
+        # Query booking table to find time & date that match user selected time and date
         booked_slots = Booking.objects.filter(booking_time=selected_time)
         booked_dates = Booking.objects.filter(booking_date=selected_date)
-        print(booked_dates)
         
+        # Check to see if there are bookings for the same day
         if len(booked_dates) > 0:
             for slot in booked_dates:
+                # Check if the user seleted time is already booked and return error message
                 if slot.booking_time == selected_time:
-                    print('Cannot book that time!')
                     messages.error(request, 'Cannot book that time!')
                     context = {
                         'form': form
@@ -31,29 +32,20 @@ def booking(request):
                     return render(request, 'booking/booking.html', context)
 
                 else:
+                    # Check if the form data is valid
                     if form.is_valid():
                         booking = form.save(commit=False)
+                        # Assign the user with the booking
                         booking.user = request.user
                         booking.save()
-                        print('Booking confirmed')
         else:
+            # Check if the form data is valid
             if form.is_valid():
                 booking = form.save(commit=False)
+                # Assign the user with the booking
                 booking.user = request.user
                 booking.save()
-                print('Booking confirmed')
         
-
-        # if len(bookings_dates) == 0:
-            
-        #     if form.is_valid():
-        #         booking = form.save(commit=False)
-        #         booking.user = request.user
-        #         booking.save()
-        #         print('Booking confirmed')
-        # else:
-        #     print('Cannot book that time!')
-
     context = {
         'form': form
     }
