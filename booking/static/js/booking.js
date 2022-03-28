@@ -14,5 +14,5 @@ if (mm < 10) {
 } 
  
 // Stops user from being able to choose a date in the past
-today = dd + '-' + mm + '-' + yyyy;
+today = yyyy + '-' + mm + '-' + dd;
 datePicker.setAttribute("min", today);
