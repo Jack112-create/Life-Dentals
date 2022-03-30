@@ -5,10 +5,21 @@ from django.contrib import messages
 
 def booking(request):
     user = request.user
+
+    bookings = user.booking
+
+    context = {
+        "bookings": bookings
+    }
+    
+    return render(request, 'booking/booking.html', context)
+
+
+def createBooking(request):
+    user = request.user
     
     form = BookingForm()
     
-
     if request.method == 'POST':
         form = BookingForm(request.POST)
 
@@ -26,10 +37,6 @@ def booking(request):
                 # Check if the user seleted time is already booked and return error message
                 if slot.booking_time == selected_time:
                     messages.error(request, 'Cannot book that time!')
-                    context = {
-                        'form': form
-                    }
-                    return render(request, 'booking/booking.html', context)
 
                 else:
                     # Check if the form data is valid
@@ -45,8 +52,7 @@ def booking(request):
                 # Assign the user with the booking
                 booking.user = request.user
                 booking.save()
-        
     context = {
         'form': form
     }
-    return render(request, 'booking/booking.html', context)
+    return render(request, 'booking/create-booking.html', context)
