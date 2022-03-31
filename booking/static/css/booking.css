@@ -72,3 +72,13 @@
     border: 0.1rem solid var(--ui-blue);
     background-color: var(--ui-grey);
 }
+
+@media only screen and (min-width: 768px) {
+    .booking-time, .booking-date, .booking-treatment {
+        font-size: 2rem;
+    }
+
+    .appointment-treatment p, .appointment-date p, .appointment-time p {
+        font-size: 1.5rem;
+    }
+}
