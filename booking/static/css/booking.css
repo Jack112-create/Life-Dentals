@@ -1,0 +1,72 @@
+:root {
+    --ui-blue: #30C9E8;
+    --ui-grey: #3B4A4D;
+    --ui-light-grey: #F7F8FA;
+    --ui-white: #FFFFFF;
+    --ui-red: #FF4431;
+    --ui-green: #50CB9D;
+    --ui-orange: #F6B002;
+}
+
+.appointment-header {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+}
+
+.appointment-btn {
+    color: var(--ui-light-grey);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 0.1rem solid var(--ui-blue);
+    background-color: var(--ui-grey);
+    margin-left: 0.5rem;
+}
+
+.appointment-header h1 {
+    font-family: 'Oswald', sans-serif;
+    margin-right: 0.5rem;
+}
+
+.appointments {
+    width: 300px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.appointment-card {
+    border: 0.2rem solid var(--ui-blue);
+    padding: 2rem;
+    text-align: left;
+}
+
+.appointment-treatment, .appointment-date, .appointment-time {
+    display: flex;
+    align-items: center;
+}
+
+.booking-time, .booking-date, .booking-treatment {
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 50%;
+}
+
+.appointment-treatment p, .appointment-date p, .appointment-time p {
+    font-size: 1.2rem;
+}
+
+.card-buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.edit-btn, .delete-btn {
+    color: var(--ui-light-grey);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 0.1rem solid var(--ui-blue);
+    background-color: var(--ui-grey);
+}

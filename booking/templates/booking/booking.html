@@ -9,7 +9,7 @@
 {% block content %}
 
 <header class="appointment-header">
-    <h1>Your Appointments</h1>
+    <h1>Your Appointment</h1>
     <a href="{% url 'create-booking' %}" class="appointment-btn">New Appointment</a>
 </header>
 <section class="appointments">
@@ -21,10 +21,10 @@
     </ul>
     {% endif %}
 
-    <div class="appointment">
+    <div class="appointment-card">
         <div class="appointment-treatment">
             <span class="booking-treatment">Treatment- </span>
-            <p>{{bookings.treatment}}</p>
+            <p>{{bookings.treatments}}</p>
         </div>
         <div class="appointment-date">
             <span class="booking-date">Date- </span>
@@ -34,8 +34,10 @@
             <span class="booking-time">Time- </span>
             <p>{{bookings.booking_time}}</p>
         </div>
-        <a href="#" class="edit-btn">Edit</a>
-        <a href="#" class="delete-btn">Delete</a>
+        <div class="card-buttons">
+            <a href="#" class="edit-btn">Edit</a>
+            <a href="#" class="delete-btn">Delete</a>
+        </div>
     </div>
 </section>
 <script src="{% static 'js/booking.js' %}"></script>
