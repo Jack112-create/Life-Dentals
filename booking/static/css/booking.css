@@ -84,4 +84,12 @@
     .appointment-treatment p, .appointment-date p, .appointment-time p {
         font-size: 1.5rem;
     }
+
+    .appointment-header {
+        flex-direction: row;
+    }
+
+    .appointment-header h1 {
+        font-size: 2.5rem;
+    }
 }
