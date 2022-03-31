@@ -31,9 +31,9 @@
 }
 
 .appointments {
-    width: 300px;
-    max-width: 500px;
-    margin: 0 auto;
+   width: 80%;
+   max-width: 400px;
+   margin: 0 auto;
 }
 
 .appointment-card {
@@ -55,6 +55,8 @@
 
 .appointment-treatment p, .appointment-date p, .appointment-time p {
     font-size: 1.2rem;
+    width: 50%;
+    text-align: center;
 }
 
 .card-buttons {
