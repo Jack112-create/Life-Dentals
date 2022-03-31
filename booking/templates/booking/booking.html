@@ -8,8 +8,11 @@
 
 {% block content %}
 
-<h1>Booking page</h1>
-
+<header class="appointment-header">
+    <h1>Your Appointment</h1>
+    <a href="{% url 'create-booking' %}" class="appointment-btn">New Appointment</a>
+</header>
+<section class="appointments">
     {% if messages %}
     <ul class="messages">
         {% for message in messages %}
@@ -18,12 +21,25 @@
     </ul>
     {% endif %}
 
-    <p>{{bookings.treatment}}</p>
-    <p>{{bookings.booking_date}}</p>
-    <p>{{bookings.booking_time}}</p>
-
-    <p>Make a booking <a href="{% url 'create-booking' %}">here</a></p>
-
+    <div class="appointment-card">
+        <div class="appointment-treatment">
+            <span class="booking-treatment">Treatment- </span>
+            <p>{{bookings.treatments}}</p>
+        </div>
+        <div class="appointment-date">
+            <span class="booking-date">Date- </span>
+            <p>{{bookings.booking_date}}</p>
+        </div>
+        <div class="appointment-time">
+            <span class="booking-time">Time- </span>
+            <p>{{bookings.booking_time}}</p>
+        </div>
+        <div class="card-buttons">
+            <a href="#" class="edit-btn">Edit</a>
+            <a href="#" class="delete-btn">Delete</a>
+        </div>
+    </div>
+</section>
 <script src="{% static 'js/booking.js' %}"></script>
 
 {% endblock content %}
