@@ -33,9 +33,11 @@
                     <li class="nav-link">
                         <a href="{% url 'treatments' %}">Treatments</a>
                     </li>
+                    {% if user.is_authenticated %}
                     <li class="nav-link">
                         <a href="{% url 'booking' %}">Booking</a>
                     </li>
+                    {% endif %}
                     <li class="nav-link">
                         <a href="{% url 'contact' %}">Contact</a>
                     </li>
