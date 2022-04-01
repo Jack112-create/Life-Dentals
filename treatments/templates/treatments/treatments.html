@@ -9,12 +9,14 @@
 {% block content %}
 
 <main>
+    <!-- Start of treatments section -->
     <section class="treatments">
 
         <header class="treatments-header">
             <h1 id="treatments-heading">Treatments</h1>
         </header>
 
+        <!-- Loop over treatments and render them into the template -->
         {% for treatment in treatments %}
         <div class="treatment">
 
@@ -49,7 +51,11 @@
             {% endif %}
         </div>
         {% endfor %}
+        <!-- End of treatment for loop -->
     </section>
+    <!-- End of treatments section -->
+
+    <!-- Start of testimonials section -->
     <section class="testimonials">
         <h3 id="testimonials-heading">Testimonials</h3>
         <div class="testimonial">
@@ -73,6 +79,7 @@
             <i id="next" class="fas fa-arrow-right right-arrow"></i>
         </div>
     </section>
+    <!-- End of testimonials section -->
 </main>
 <script src="{% static 'js/treatments.js' %}"></script>
 {% endblock content %}
