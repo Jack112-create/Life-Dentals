@@ -8,10 +8,10 @@
 
 {% block content %}
 
-<header class="appointment-header">
+<div class="appointment-header">
     <h1>Your Appointment</h1>
     <a href="{% url 'create-booking' %}" class="appointment-btn">New Appointment</a>
-</header>
+</div>
 <section class="appointments">
     {% if messages %}
     <ul class="messages">
