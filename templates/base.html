@@ -17,6 +17,7 @@
     <title>Life Dentals</title>
 </head>
 <body>
+    <!-- Start of navbar -->
     <nav class="navbar">
         <div class="container flex-nav">
             <div class="nav-header">
@@ -33,6 +34,7 @@
                     <li class="nav-link">
                         <a href="{% url 'treatments' %}">Treatments</a>
                     </li>
+                    <!-- Only shown to users that are logged in -->
                     {% if user.is_authenticated %}
                     <li class="nav-link">
                         <a href="{% url 'booking' %}">Booking</a>
@@ -41,6 +43,7 @@
                     <li class="nav-link">
                         <a href="{% url 'contact' %}">Contact</a>
                     </li>
+                    <!-- Only shown to users that are logged in -->
                     {% if request.user.is_authenticated %}
                     <li class="nav-link">
                         <a href="{% url 'logout' %}">Logout</a>
@@ -54,6 +57,7 @@
             </div>
         </div>
     </nav>
+    <!-- End of navbar -->
     {% block content %}
 
     {% endblock content %}
