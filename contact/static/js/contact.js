@@ -1,3 +1,9 @@
+const config = {
+    USER_ID : 'user_TJJYMaTD8WNx5eFtVAj2w',
+    TEMPLATE_ID : 'contact_form',
+    SERVICE_ID: "service_covz2ff"
+};
+
 (function() {
     emailjs.init(config.USER_ID);
 })();
