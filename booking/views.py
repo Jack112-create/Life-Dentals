@@ -8,7 +8,11 @@ from django.contrib import messages
 def booking(request):
     user = request.user
 
-    bookings = user.booking
+    try:
+        bookings = user.booking
+    except:
+        print('no bookings')
+        bookings = ''
 
     context = {
         "bookings": bookings
