@@ -8,6 +8,14 @@
     --ui-orange: #F6B002;
 }
 
+.booking-message {
+    padding: 1rem;
+    background-color: var(--ui-blue);
+    font-size: 2rem;
+    list-style: none;
+    text-align: center;
+}
+
 .appointment-header {
     text-align: center;
     justify-content: center;

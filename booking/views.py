@@ -58,6 +58,8 @@ def createBooking(request):
                 # Assign the user with the booking
                 booking.user = request.user
                 booking.save()
+                messages.success(request, 'Booking Successful!')
+                return redirect('booking')
     context = {
         'form': form
     }

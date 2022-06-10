@@ -16,7 +16,11 @@
     {% if messages %}
     <ul class="messages">
         {% for message in messages %}
-        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% if message.message == 'Booking Successful!' %}
+                <li class="booking-message">{{ message }}</li>
+            {% else %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endif %}
         {% endfor %}
     </ul>
     {% endif %}
