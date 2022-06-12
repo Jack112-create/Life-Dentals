@@ -41,8 +41,8 @@
             <p>{{bookings.booking_time}}</p>
         </div>
         <div class="card-buttons">
-            <a href="#" class="edit-btn">Edit</a>
-            <a href="#" class="delete-btn">Delete</a>
+            <a href="{% url 'edit-booking' %}" class="edit-btn">Edit</a>
+            <a href="{% url 'delete-booking' %}" class="delete-btn">Delete</a>
         </div>
     </div>
     {% endif %}

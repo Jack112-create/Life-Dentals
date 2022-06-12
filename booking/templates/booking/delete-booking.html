@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block cssfile %}
+<link rel="stylesheet" href="{% static 'css/booking.css' %}">
+{% endblock cssfile %}
+
+{% block content %}
+<form action="{% url 'delete-booking' %}" method="post">
+    {% csrf_token %}
+    <h1>Are you sure you wont to delete your booking?</h1>
+    <input type="submit" value="Yes">
+</form>
+{% endblock content %}

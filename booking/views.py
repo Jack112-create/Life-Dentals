@@ -64,3 +64,38 @@ def createBooking(request):
         'form': form
     }
     return render(request, 'booking/create-booking.html', context)
+
+@login_required(login_url='login')
+def editBooking(request):
+    user = request.user
+
+    booking = Booking.objects.get(user=user)
+    print(booking)
+
+    form = BookingForm(instance=booking)
+
+    if request.method == 'POST':
+        print('hi')
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            return redirect('booking')
+
+    context = {
+        'form': form
+    }
+
+    return render(request, 'booking/edit-booking.html', context)
+
+@login_required(login_url='login')
+def deleteBooking(request):
+    user = request.user
+    booking = Booking.objects.get(user=user)
+    print(booking)
+
+    if request.method == 'POST':
+        booking.delete()
+        return redirect('booking')
+    
+    context = {"object": booking}
+    return render(request, 'booking/delete-booking.html', context)
