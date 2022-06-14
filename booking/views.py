@@ -23,7 +23,13 @@ def booking(request):
 @login_required(login_url='login')
 def createBooking(request):
     user = request.user
-    
+
+    try:
+        bookings = Booking.objects.get(user=user)
+        return redirect('booking')
+    except:
+        pass
+        
     form = BookingForm()
     
     if request.method == 'POST':

@@ -10,7 +10,9 @@
 
 <div class="appointment-header">
     <h1>Your Appointment</h1>
+    {% if bookings == '' %}
     <a href="{% url 'create-booking' %}" class="appointment-btn">New Appointment</a>
+    {% endif %}
 </div>
 <section class="appointments">
     {% if messages %}
