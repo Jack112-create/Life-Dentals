@@ -90,7 +90,6 @@ def editBooking(request):
         # Query booking table to find time & date that match user selected time and date
         booked_slots = Booking.objects.filter(booking_time=selected_time)
         booked_dates = Booking.objects.filter(booking_date=selected_date)
-        print(booked_dates)
 
         # Check to see if there are bookings for the same day
         timeList = []
@@ -100,14 +99,12 @@ def editBooking(request):
         if len(booked_dates) > 0:
 
             if selected_time not in timeList:
-                print('not in')
                 form = BookingForm(request.POST, instance=booking)
                 if form.is_valid():
                     form.save()
                     return redirect('booking')
             
             else:
-                print('is in')
                 messages.error(request, 'Cannot book that time!')
 
         else:
@@ -127,7 +124,6 @@ def editBooking(request):
 def deleteBooking(request):
     user = request.user
     booking = Booking.objects.get(user=user)
-    print(booking)
 
     if request.method == 'POST':
         booking.delete()
