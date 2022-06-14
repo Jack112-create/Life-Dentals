@@ -8,6 +8,43 @@
     --ui-orange: #F6B002;
 }
 
+#create-booking-header, #edit-booking-header {
+    text-align: center;
+    margin: 5rem 0rem;
+}
+
+.booking-form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid var(--ui-blue);
+}
+
+.booking-form label {
+    margin-bottom: 1rem;
+}
+
+.booking-form select, input[type="date"], input[type="submit"] {
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--ui-blue);
+}
+
+.booking-form input[type="submit"] {
+    background-color: var(--ui-grey);
+    color: var(--ui-blue);
+    cursor: pointer;
+    min-width: 150px;
+    max-width: 150px;
+}
+
+.booking-form input[type="submit"]:hover {
+    background-color: var(--ui-blue);
+    color: var(--ui-white);
+}
+
 .booking-message {
     padding: 1rem;
     background-color: var(--ui-blue);

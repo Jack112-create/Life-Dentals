@@ -8,7 +8,7 @@
 
 {% block content %}
 
-<h1>Edit your booking</h1>
+<h1 id="edit-booking-header">Edit your booking</h1>
 
 {% if messages %}
     <ul class="messages">
@@ -18,10 +18,10 @@
     </ul>
 {% endif %}
 
-<form action="{% url 'edit-booking' %}" method="POST">
+<form class="booking-form" action="{% url 'edit-booking' %}" method="POST">
     {% csrf_token %}
     {{ form }}
-    <input type="submit" value="Make appointment">
+    <input type="submit" value="Submit">
 </form>
 
 <script src="{% static 'js/booking.js' %}"></script>
