@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+
 def contact(request):
     """
     Renders contact page

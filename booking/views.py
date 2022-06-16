@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from .forms import BookingForm
 from django.contrib import messages
 
+
 @login_required(login_url='login')
 def booking(request):
     user = request.user
@@ -17,8 +18,9 @@ def booking(request):
     context = {
         "bookings": bookings
     }
-    
+
     return render(request, 'booking/booking.html', context)
+
 
 @login_required(login_url='login')
 def createBooking(request):
@@ -29,9 +31,9 @@ def createBooking(request):
         return redirect('booking')
     except:
         pass
-        
+
     form = BookingForm()
-    
+
     if request.method == 'POST':
         form = BookingForm(request.POST)
 
@@ -39,15 +41,19 @@ def createBooking(request):
         selected_time = request.POST['booking_time']
         selected_date = request.POST['booking_date']
 
-        # Query booking table to find time & date that match user selected time and date
+        """ Query booking table to find time & date that
+        match user selected time and date
+        """
         booked_slots = Booking.objects.filter(booking_time=selected_time)
         booked_dates = Booking.objects.filter(booking_date=selected_date)
-        
+
         # Check to see if there are bookings for the same day
         if len(booked_dates) > 0:
             print('same day')
             for slot in booked_dates:
-                # Check if the user seleted time is already booked and return error message
+                """ Check if the user seleted time is already booked
+                and return error message
+                """
                 if slot.booking_time == selected_time:
                     messages.error(request, 'Cannot book that time!')
 
@@ -74,6 +80,7 @@ def createBooking(request):
     }
     return render(request, 'booking/create-booking.html', context)
 
+
 @login_required(login_url='login')
 def editBooking(request):
     user = request.user
@@ -87,7 +94,9 @@ def editBooking(request):
         selected_time = request.POST['booking_time']
         selected_date = request.POST['booking_date']
 
-        # Query booking table to find time & date that match user selected time and date
+        """ Query booking table to find time & date that
+        match user selected time and date
+        """
         booked_slots = Booking.objects.filter(booking_time=selected_time)
         booked_dates = Booking.objects.filter(booking_date=selected_date)
 
@@ -103,7 +112,7 @@ def editBooking(request):
                 if form.is_valid():
                     form.save()
                     return redirect('booking')
-            
+
             else:
                 messages.error(request, 'Cannot book that time!')
 
@@ -113,12 +122,12 @@ def editBooking(request):
                 form.save()
                 return redirect('booking')
 
-
     context = {
         'form': form
     }
 
     return render(request, 'booking/edit-booking.html', context)
+
 
 @login_required(login_url='login')
 def deleteBooking(request):
@@ -128,6 +137,6 @@ def deleteBooking(request):
     if request.method == 'POST':
         booking.delete()
         return redirect('booking')
-    
+
     context = {"object": booking}
     return render(request, 'booking/delete-booking.html', context)

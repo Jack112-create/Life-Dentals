@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Treatment
 
+
 def treatments(request):
     """
     Renders the treatments page

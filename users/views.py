@@ -25,11 +25,10 @@ def loginUser(request):
         try:
             user = User.objects.get(username=username)
         except:
-            messages.error(request,'Username does not exist')
-        
-        
+            messages.error(request, 'Username does not exist')
+
         user = authenticate(request, username=username, password=password)
-        
+
         if user is not None:
             login(request, user)
             return redirect('booking')
@@ -42,6 +41,7 @@ def loginUser(request):
 
     return render(request, 'users/login_register.html', context)
 
+
 def logoutUser(request):
     """
     Logs a user out
@@ -50,6 +50,7 @@ def logoutUser(request):
     logout(request)
     messages.success(request, 'Logout successful!')
     return redirect('login')
+
 
 def registerUser(request):
     """
@@ -72,7 +73,8 @@ def registerUser(request):
             return redirect('booking')
 
         else:
-            messages.error(request, 'An error has occurred during registration')
+            messages.error(
+                request, 'An error has occurred during registration')
 
     context = {'page': page, 'form': form}
     return render(request, 'users/login_register.html', context)

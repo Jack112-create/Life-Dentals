@@ -6,6 +6,7 @@ from .models import Booking
 class DateInput(forms.DateInput):
     input_type = 'date'
 
+
 class BookingForm(ModelForm):
 
     class Meta:

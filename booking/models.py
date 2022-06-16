@@ -23,14 +23,26 @@ class Booking(models.Model):
     # Retrieve all instances of Treatment model
     TREATMENT_CHOICES = Treatment.objects.all()
 
-    # Add treatments into tuple so that it can be added to choices parameter below
+    """Add treatments into tuple so that
+    it can be added to choices parameter below
+    """
     for i in range(len(TREATMENT_CHOICES)):
-        TREATMENTS_LIST.append((f'{TREATMENT_CHOICES[i].treatment}', TREATMENT_CHOICES[i].treatment))
-    
+        TREATMENTS_LIST.append((
+            f'{TREATMENT_CHOICES[i].treatment}',
+            TREATMENT_CHOICES[i].treatment))
+
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     treatments = models.CharField(max_length=15, choices=TREATMENTS_LIST)
-    booking_date = models.DateField(auto_now_add=False, auto_now=False, blank=True, null=True, default=date.today)
-    booking_time = models.CharField(max_length=50, choices=TIMESLOT_LIST, default=TIMESLOT_LIST[0][1])
+    booking_date = models.DateField(
+        auto_now_add=False,
+        auto_now=False,
+        blank=True,
+        null=True,
+        default=date.today)
+    booking_time = models.CharField(
+        max_length=50,
+        choices=TIMESLOT_LIST,
+        default=TIMESLOT_LIST[0][1])
 
     def __str__(self):
         return str(f'{self.user}: booking')
