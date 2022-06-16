@@ -44,5 +44,8 @@ class Booking(models.Model):
         choices=TIMESLOT_LIST,
         default=TIMESLOT_LIST[0][1])
 
+    class Meta:
+        unique_together = ('booking_date', 'booking_time',)
+
     def __str__(self):
         return str(f'{self.user}: booking')

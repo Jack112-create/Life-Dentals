@@ -47,37 +47,19 @@ def createBooking(request):
         booked_slots = Booking.objects.filter(booking_time=selected_time)
         booked_dates = Booking.objects.filter(booking_date=selected_date)
 
-        # Check to see if there are bookings for the same day
-        if len(booked_dates) > 0:
-            print('same day')
-            for slot in booked_dates:
-                """ Check if the user seleted time is already booked
-                and return error message
-                """
-                if slot.booking_time == selected_time:
-                    messages.error(request, 'Cannot book that time!')
+        # Check if the form data is valid
+        if form.is_valid():
+            booking = form.save(commit=False)
+            # Assign the user with the booking
+            booking.user = request.user
+            booking.save()
+            messages.success(request, 'Booking Successful!')
+            return redirect('booking')
 
-                else:
-                    # Check if the form data is valid
-                    if form.is_valid():
-                        booking = form.save(commit=False)
-                        # Assign the user with the booking
-                        booking.user = request.user
-                        booking.save()
-                        messages.success(request, 'Booking Successful!')
-                        return redirect('booking')
-        else:
-            # Check if the form data is valid
-            if form.is_valid():
-                booking = form.save(commit=False)
-                # Assign the user with the booking
-                booking.user = request.user
-                booking.save()
-                messages.success(request, 'Booking Successful!')
-                return redirect('booking')
     context = {
         'form': form
     }
+
     return render(request, 'booking/create-booking.html', context)
 
 
@@ -100,27 +82,13 @@ def editBooking(request):
         booked_slots = Booking.objects.filter(booking_time=selected_time)
         booked_dates = Booking.objects.filter(booking_date=selected_date)
 
-        # Check to see if there are bookings for the same day
-        timeList = []
-        for slot in booked_slots:
-            timeList.append(slot.booking_time)
-
-        if len(booked_dates) > 0:
-
-            if selected_time not in timeList:
-                form = BookingForm(request.POST, instance=booking)
-                if form.is_valid():
-                    form.save()
-                    return redirect('booking')
-
-            else:
-                messages.error(request, 'Cannot book that time!')
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            return redirect('booking')
 
         else:
-            form = BookingForm(request.POST, instance=booking)
-            if form.is_valid():
-                form.save()
-                return redirect('booking')
+            messages.error(request, 'Cannot book that time!')
 
     context = {
         'form': form
