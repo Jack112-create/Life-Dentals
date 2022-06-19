@@ -8,6 +8,18 @@
     --ui-orange: #F6B002;
 }
 
+.delete-booking {
+    width: 80%;
+    margin: 0 auto;
+    padding: 3rem;
+    margin-top: 5rem;
+    border: 1px solid var(--ui-blue);
+}
+
+.delete-booking h1 {
+    margin-bottom: 1rem;
+}
+
 #create-booking-header, #edit-booking-header {
     text-align: center;
     margin: 5rem 0rem;
