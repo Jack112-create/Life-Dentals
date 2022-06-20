@@ -11,12 +11,12 @@
 {% if page == 'login' %}
 
 <div class="login-form">
-    <div class="login-header">
-        <i class="fas fa-user user-icon"></i>
-        <h1>Sign into your account</h1>
-    </div>  
-
+    
     <section class="form">
+        <div class="login-header">
+            <i class="fas fa-user user-icon"></i>
+            <h1>Sign into your account</h1>
+        </div>  
         <form method="POST" action="{% url 'login' %}">
             {% csrf_token %}
             <input type="text" class="form-input" name="username" placeholder="Username">
@@ -30,12 +30,12 @@
 {% else %}
 
 <div class="sign-up-form">
-    <div class="sign-up-header">
-        <i class="fas fa-user user-icon"></i>
-        <h1 >Create an account</h1>
-    </div>
-
+    
     <section class="form">
+        <div class="sign-up-header">
+            <i class="fas fa-user user-icon"></i>
+            <h1 >Create an account</h1>
+        </div>
         <form action="{% url 'register' %}" method="POST">
             {% csrf_token %}
             {{ form }}
