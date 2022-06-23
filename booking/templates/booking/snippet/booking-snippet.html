@@ -1,0 +1,30 @@
+<div id="times">
+    {{ today_date }}
+    <form class="booking-form" action="{% url 'create-booking' %}" method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+            {% if field.name == 'booking_date' %}
+            <input type="date" value="{{ date }}" name="booking_date" id="id_booking_date" hx-post="{% url 'create-booking-htmx' %}" hx-target="#times" min="{{ today_date|date:'Y-m-d' }}"  hx-swap="outerHTML">
+            {% elif field.name == 'booking_time' %}
+                <select name="booking_time" id="id_booking_time">
+                    {% for id, slot in form.booking_time.field.choices %}
+                        {% if slot not in times %}
+                            <option value="{{ slot }}">{{ slot }}</option>
+                        {% endif %}
+                    {% endfor %}   
+                </select>
+            {% else %}
+            <select name="treatments" required id="id_treatments">
+                {% for slot, choice in form.treatments.field.choices  %}
+                    {% if slot == treatment %}
+                    <option value="{{ slot }}" selected>{{ slot }}</option>
+                    {% else %}
+                        <option value="{{ slot }}">{{ slot }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+            {% endif %}
+        {% endfor %}
+        <input type="submit" value="Submit">
+</form>
+</div>

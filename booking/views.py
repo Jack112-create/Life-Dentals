@@ -3,6 +3,7 @@ from .models import Booking
 from django.contrib.auth.decorators import login_required
 from .forms import BookingForm
 from django.contrib import messages
+import datetime
 
 
 @login_required(login_url='login')
@@ -25,6 +26,8 @@ def booking(request):
 @login_required(login_url='login')
 def createBooking(request):
     user = request.user
+
+    today_date = datetime.datetime.now().date()
 
     try:
         bookings = Booking.objects.get(user=user)
@@ -57,10 +60,38 @@ def createBooking(request):
             return redirect('booking')
 
     context = {
-        'form': form
+        'form': form,
+        'today_date': today_date
     }
 
     return render(request, 'booking/create-booking.html', context)
+
+
+def createBookinghtmx(request):
+    if request.htmx:
+        form = BookingForm()
+
+        date = request.POST['booking_date']
+        print(date)
+
+        today_date = datetime.datetime.now().date()
+
+        treatment = request.POST['treatments']
+
+        bookings = Booking.objects.filter(booking_date=date)
+        booked_times = []
+
+        for slot in bookings:
+            booked_times.append(slot.booking_time)
+
+        context = {
+            'treatment': treatment,
+            'times': booked_times,
+            'date': date,
+            'form': form,
+            'today_date': today_date
+        }
+        return render(request, 'booking/snippet/booking-snippet.html', context)
 
 
 @login_required(login_url='login')

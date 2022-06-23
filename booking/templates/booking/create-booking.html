@@ -18,12 +18,22 @@
     </ul>
     {% endif %}
 
-    <form class="booking-form" action="{% url 'create-booking' %}" method="POST">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="Submit">
-    </form>
 
+    <div id="times">
+        <form class="booking-form" action="{% url 'create-booking' %}" method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+                {% if field.name == 'booking_date' %}
+                    <input type="date" name="booking_date" id="id_booking_date" hx-target="#times" value="{{ today_date|date:'Y-m-d' }}"  hx-swap="outerHTML" hx-post="{% url 'create-booking-htmx' %}">
+                {% else %}
+                    {{ field }}
+                {% endif %}
+            {% endfor %}
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+ 
 <script src="{% static 'js/booking.js' %}"></script>
+<script src="{% static 'js/htmx.js' %}"></script>
 
 {% endblock content %}
