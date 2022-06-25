@@ -10,6 +10,7 @@
 
 .delete-booking {
     width: 80%;
+    max-width: 500px;
     margin: 0 auto;
     padding: 3rem;
     margin-top: 5rem;
@@ -18,6 +19,27 @@
 
 .delete-booking h1 {
     margin-bottom: 1rem;
+}
+
+.delete-booking .delete-btns {
+    display: flex;
+    justify-content: start;
+}
+
+.delete-booking #cancel-btn {
+    padding: 1.1rem 2rem;
+    background-color: var(--ui-light-grey);
+    color: var(--ui-blue);
+    border: 1px solid var(--ui-blue);
+    text-decoration: none;
+    margin-bottom: 1rem;
+    margin-left: 10px;
+}
+
+.delete-booking #cancel-btn:hover {
+    background-color: var(--ui-blue);
+    color: var(--ui-white);
+    border-color: var(--ui-grey);
 }
 
 #create-booking-header, #edit-booking-header {

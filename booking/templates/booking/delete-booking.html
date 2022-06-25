@@ -10,6 +10,9 @@
 <form class="delete-booking" action="{% url 'delete-booking' %}" method="post">
     {% csrf_token %}
     <h1>Are you sure you want to delete your booking?</h1>
-    <input type="submit" value="Yes">
+    <div class="delete-btns">
+        <input type="submit" value="Yes">
+        <a id="cancel-btn" href="{% url 'booking' %}">Cancel</a>
+    </div>
 </form>
 {% endblock content %}
