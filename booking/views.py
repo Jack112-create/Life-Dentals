@@ -13,7 +13,6 @@ def booking(request):
     try:
         bookings = user.booking
     except:
-        print('no bookings')
         bookings = ''
 
     context = {
@@ -30,14 +29,11 @@ def createBooking(request):
     today_date = datetime.datetime.now().date()
 
     bookings = Booking.objects.all()
-    print(bookings)
     booked_times = []
 
     for booking in bookings:
         if booking.booking_date == today_date:
            booked_times.append(booking.booking_time)
-    
-    print(booked_times)
 
     try:
         bookings = Booking.objects.get(user=user)
@@ -83,7 +79,6 @@ def createBookinghtmx(request):
         form = BookingForm()
 
         date = request.POST['booking_date']
-        print(date)
 
         today_date = datetime.datetime.now().date()
 
@@ -116,7 +111,6 @@ def editBooking(request):
     today_date = datetime.datetime.now().date()
 
     bookings = Booking.objects.filter(booking_date=booking.booking_date)
-    print(bookings)
     booked_times = []
 
     for times in bookings:
@@ -151,9 +145,7 @@ def editBooking(request):
 
 
 def editBookinghtmx(request):
-    print('request to edit booking htmx')
     if request.htmx:
-        print('htmx request was made')
         user = request.user
 
         booking = Booking.objects.get(user=user)
@@ -161,7 +153,6 @@ def editBookinghtmx(request):
         form = BookingForm(instance=booking)
 
         date = request.POST['booking_date']
-        print(date)
 
         today_date = datetime.datetime.now().date()
 
@@ -179,7 +170,6 @@ def editBookinghtmx(request):
             'date': date,
             'form': form,
             'today_date': today_date,
-            'test': 'testing edit'
         }
         return render(request, 'booking/snippet/edit-booking-htmx.html', context)
 
