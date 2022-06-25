@@ -29,6 +29,16 @@ def createBooking(request):
 
     today_date = datetime.datetime.now().date()
 
+    bookings = Booking.objects.all()
+    print(bookings)
+    booked_times = []
+
+    for booking in bookings:
+        if booking.booking_date == today_date:
+           booked_times.append(booking.booking_time)
+    
+    print(booked_times)
+
     try:
         bookings = Booking.objects.get(user=user)
         return redirect('booking')
@@ -61,6 +71,7 @@ def createBooking(request):
 
     context = {
         'form': form,
+        'booked_times': booked_times,
         'today_date': today_date
     }
 
