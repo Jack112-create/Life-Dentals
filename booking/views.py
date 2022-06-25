@@ -113,6 +113,15 @@ def editBooking(request):
 
     form = BookingForm(instance=booking)
 
+    today_date = datetime.datetime.now().date()
+
+    bookings = Booking.objects.filter(booking_date=booking.booking_date)
+    print(bookings)
+    booked_times = []
+
+    for times in bookings:
+        booked_times.append(times.booking_time)
+
     if request.method == 'POST':
         # Get user selected time and date for booking
         selected_time = request.POST['booking_time']
@@ -133,10 +142,46 @@ def editBooking(request):
             messages.error(request, 'Cannot book that time!')
 
     context = {
-        'form': form
+        'form': form,
+        'booked_times': booked_times,
+        'today_date': today_date
     }
 
     return render(request, 'booking/edit-booking.html', context)
+
+
+def editBookinghtmx(request):
+    print('request to edit booking htmx')
+    if request.htmx:
+        print('htmx request was made')
+        user = request.user
+
+        booking = Booking.objects.get(user=user)
+
+        form = BookingForm(instance=booking)
+
+        date = request.POST['booking_date']
+        print(date)
+
+        today_date = datetime.datetime.now().date()
+
+        treatment = request.POST['treatments']
+
+        bookings = Booking.objects.filter(booking_date=date)
+        booked_times = []
+
+        for slot in bookings:
+            booked_times.append(slot.booking_time)
+
+        context = {
+            'treatment': treatment,
+            'times': booked_times,
+            'date': date,
+            'form': form,
+            'today_date': today_date,
+            'test': 'testing edit'
+        }
+        return render(request, 'booking/snippet/edit-booking-htmx.html', context)
 
 
 @login_required(login_url='login')
