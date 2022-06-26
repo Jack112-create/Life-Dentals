@@ -8,6 +8,14 @@
     --ui-orange: #F6B002;
 }
 
+.messages {
+    background-color: var(--ui-blue);
+    color: var(--ui-white);
+    text-align: center;
+    padding: 1rem;
+    display: inline-block;
+    font-size: 2rem;
+}
 
 .login-form, .sign-up-form {
     display: flex;

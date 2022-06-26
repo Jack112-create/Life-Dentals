@@ -31,6 +31,7 @@ def loginUser(request):
 
         if user is not None:
             login(request, user)
+            messages.success(request, 'Login Successful!')
             return redirect('booking')
         else:
             messages.error(request, 'Username OR password is incorrect')

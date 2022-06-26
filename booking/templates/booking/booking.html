@@ -8,6 +8,17 @@
 
 {% block content %}
 
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+        {% if message.message == 'Booking Successful!' %}
+            <li class="booking-message">{{ message }}</li>
+        {% else %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endif %}
 
 <section class="appointments">
     <div class="appointment-header">
@@ -16,17 +27,6 @@
         <a href="{% url 'create-booking' %}" class="appointment-btn">New Appointment</a>
         {% endif %}
     </div>
-    {% if messages %}
-    <ul class="messages">
-        {% for message in messages %}
-            {% if message.message == 'Booking Successful!' %}
-                <li class="booking-message">{{ message }}</li>
-            {% else %}
-                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-            {% endif %}
-        {% endfor %}
-    </ul>
-    {% endif %}
 
     <!-- Shows user booking -->
     {% if bookings != '' %}
@@ -51,6 +51,6 @@
     {% endif %}
     <!-- End of user booking -->
 </section>
-<script src="{% static 'js/booking.js' %}"></script>
+<script src="{% static 'js/messages.js' %}"></script>
 
 {% endblock content %}

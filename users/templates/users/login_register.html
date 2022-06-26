@@ -10,6 +10,14 @@
 
 {% if page == 'login' %}
 
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
 <div class="login-form">
     
     <section class="form">
@@ -45,5 +53,7 @@
     </section>
 </div>
 {% endif %}
+
+<script src="{% static 'js/messages.js' %}"></script>
 
 {% endblock content %}
