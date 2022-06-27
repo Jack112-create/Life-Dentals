@@ -23,7 +23,7 @@
         {% csrf_token %}
         {% for field in form %}
             {% if field.name == 'booking_date' %}
-                <input type="date" name="booking_date" id="id_booking_date" hx-target="#times" value="{{ today_date|date:'Y-m-d' }}"  hx-swap="outerHTML" hx-post="{% url 'edit-booking-htmx' %}">
+                <input type="date" value="{{ today_date|date:'Y-m-d' }}" name="booking_date" id="id_booking_date" hx-post="{% url 'edit-booking-htmx' %}" hx-target="#times"  min="{{ today_date|date:'Y-m-d' }}" hx-swap="outerHTML">
             {% elif field.name == 'booking_time' %}
                 <select name="booking_time" id="id_booking_time">
                     {% for id, slot in form.booking_time.field.choices %}

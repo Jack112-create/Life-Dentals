@@ -8,6 +8,12 @@ import datetime
 
 @login_required(login_url='login')
 def booking(request):
+
+    """
+    Users are redirected to booking
+    template when logging in.
+    """
+
     user = request.user
 
     try:
@@ -24,6 +30,13 @@ def booking(request):
 
 @login_required(login_url='login')
 def createBooking(request):
+
+    """
+    Users are prompted with booking form,
+    allowing them to choose a time,
+    date and treatment for their booking.
+    """
+
     user = request.user
 
     today_date = datetime.datetime.now().date()
@@ -50,12 +63,6 @@ def createBooking(request):
         selected_time = request.POST['booking_time']
         selected_date = request.POST['booking_date']
 
-        """ Query booking table to find time & date that
-        match user selected time and date
-        """
-        booked_slots = Booking.objects.filter(booking_time=selected_time)
-        booked_dates = Booking.objects.filter(booking_date=selected_date)
-
         # Check if the form data is valid
         if form.is_valid():
             booking = form.save(commit=False)
@@ -75,6 +82,13 @@ def createBooking(request):
 
 
 def createBookinghtmx(request):
+
+    """
+    Handles htmx request to allow
+    dynamic time updates when user
+    selects a date for their booking.
+    """
+
     if request.htmx:
         form = BookingForm()
 
@@ -102,6 +116,14 @@ def createBookinghtmx(request):
 
 @login_required(login_url='login')
 def editBooking(request):
+
+    """
+    User is prompted with their instance
+    of the create booking form. This allows
+    the user to update their already
+    existing booking.
+    """
+
     user = request.user
 
     booking = Booking.objects.get(user=user)
@@ -145,6 +167,14 @@ def editBooking(request):
 
 
 def editBookinghtmx(request):
+
+    """
+    Handles htmx request to allow
+    dynamic time slots to appear
+    as the user chooses a date
+    in the edit booking form.
+    """
+
     if request.htmx:
         user = request.user
 
@@ -176,6 +206,13 @@ def editBookinghtmx(request):
 
 @login_required(login_url='login')
 def deleteBooking(request):
+
+    """
+    Removes the booking entry
+    connected to the user from
+    the database.
+    """
+
     user = request.user
     booking = Booking.objects.get(user=user)
 
