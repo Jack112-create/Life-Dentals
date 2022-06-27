@@ -46,7 +46,7 @@ def createBooking(request):
 
     for booking in bookings:
         if booking.booking_date == today_date:
-           booked_times.append(booking.booking_time)
+            booked_times.append(booking.booking_time)
 
     try:
         bookings = Booking.objects.get(user=user)
@@ -201,7 +201,10 @@ def editBookinghtmx(request):
             'form': form,
             'today_date': today_date,
         }
-        return render(request, 'booking/snippet/edit-booking-htmx.html', context)
+        return render(
+            request,
+            'booking/snippet/edit-booking-htmx.html',
+            context)
 
 
 @login_required(login_url='login')
