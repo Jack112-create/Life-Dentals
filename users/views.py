@@ -14,11 +14,9 @@ def loginUser(request):
     page = 'login'
 
     if request.user.is_authenticated:
-        print('authenticated user:', request.user)
         return redirect('booking')
 
     if request.method == 'POST':
-        print(request.POST)
         username = request.POST['username'].lower()
         password = request.POST['password']
 
