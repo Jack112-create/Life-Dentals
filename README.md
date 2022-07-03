@@ -4,6 +4,8 @@
 
 Life Dentals is a full stack web application built for the purpose of allowing users to book in for a dental service with the fictional organisation. Life Dentals is my fourth portfolio project with Code Institute.
 
+![Screenshot of responsive site](./docs/images/responsive-screenshot.png)
+
 The link to the live version of this project can be found [here](https://life-dentals.herokuapp.com/).
 
 ## Table of Contents
@@ -25,15 +27,15 @@ The link to the live version of this project can be found [here](https://life-de
 
 ## UX
 
-
 ### User Stories
-
 
 ### Site Goals
 
-
 ### Strategy
 
+* Life Dentals is a dental service web application that provides both regular users, and users that have created an account, with information about the services that are available at Life Dentals. Users that have created an account gain access to the booking feature, allowing them to book in with Life Dentals for anytime, for any treatment, for any date.
+
+* The overall design is quite simple, reducing the barrier that users sometime face when visiting their favourite sites.
 
 ### Scope
 
