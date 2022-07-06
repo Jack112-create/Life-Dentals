@@ -29,7 +29,27 @@ The link to the live version of this project can be found [here](https://life-de
 
 ### User Stories
 
+* As a user, I want to a clear form of navigation so that I can navigate through the site more easily.
+
+* As a user, I want to be able to book an appointment so that I can have the required treatment.
+
+* As a user, I want to update or cancel my bookings so that I can reschedule for a later date.
+
+* As a user, I want to be able to register and log in so that I can view my bookings.
+
+* As a user, I want to view all available treatments so that I can choose the appropriate booking.
+
+* As a user, I want to read any testimonials so that I can read people's opinions and experiences of the provided service.
+
+* As a user, I want to have access to contact information, so that I can get in touch with the clinic.
+
+* As an admin user, I want access to all patient bookings so that I can delete or update any bookings (incomplete).
+
 ### Site Goals
+
+* As a site owner, I want to provide a service to people looking to receive oral care so that they can improve their oral health.
+
+* As a site owner, I want to provide users with a visually appealing website so that they have a positive user experience when browsing the site.
 
 ### Strategy
 
