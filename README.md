@@ -59,6 +59,13 @@ The link to the live version of this project can be found [here](https://life-de
 
 ### Scope
 
+Features to be included:
+
+* Responsive Design - The site should function correctly on all screen sizes. The design should allow users to have a good experience when visitng the site no matter what device they use when visiting.
+
+* Navigation -  Navigation elements should be clear to the user. The main site navigation should be clear to the user that the links will bring them to other pages on the site.
+
+* Users should be able to create, update and delete a booking if they have created an account. This feature should not be available to users who do not have an account.
 
 ### Structure
 
