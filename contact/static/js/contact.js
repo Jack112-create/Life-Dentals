@@ -1,11 +1,11 @@
 const config = {
-    USER_ID : 'user_TJJYMaTD8WNx5eFtVAj2w',
-    TEMPLATE_ID : 'contact_form',
-    SERVICE_ID: "service_covz2ff"
+    Service_ID: "service_5g6p9f6",
+    templateID : 'template_4oknqyt',
+    publicKey : '9Q-Mt9R1mAeKAjqHQ',
 };
 
 (function() {
-    emailjs.init(config.USER_ID);
+    emailjs.init(config.publicKey);
 })();
 
 const contactForm = document.getElementById('contact-form');
@@ -20,7 +20,7 @@ function sendMail(e) {
     const userMessage = document.getElementById('message');
 
     // Sending email with values from each input field.
-    emailjs.sendForm(config.SERVICE_ID, config.TEMPLATE_ID, "#contact-form", config.USER_ID)
+    emailjs.sendForm(config.Service_ID, config.templateID, "#contact-form")
     .then(function(res) {
         console.log('SUCCESS!', res);
         formModal('success');
