@@ -72,11 +72,35 @@ Features to be included:
 
 ### Surface
 
+*  #### Design
 
-#### Design
+    * Colours
+      - ![Colour Palette](/docs/images/colour-palette-1.png)
+      - ![Colour Palette](/docs/images/colour-palette-2.png)
 
+    * Icons:
+      - Font Awesome was used to add icons to multiple sections throughout the site, such as the employee section on the homepage and the footer.
+
+    * Typography:
+      - Google Fonts was used to add the "Assistant" font to the project. The "Assistant" font family was chosen as I felt it added to the simple yet visual aesthetic.
+
+#### Wireframes
+* Balsamiq was used for this project. Balsamiq allowed me to create mockup designs for each feature and layout for this project.
+
+![Homepage Desktop Wireframe](/docs/wireframes/Homepage-Desktop.png)
+
+![Homepage Desktop Wireframe](/docs/wireframes/Homepage-Tablet.png)
+
+![Homepage Mobile Wireframe](/docs/wireframes/Homepage-Mobile.png)
+
+![Treatments Page Desktop Wireframe](/docs/wireframes/Treatments-Desktop.png)
+
+![Treatments Page Tablet Wireframe](/docs/wireframes/Treatments-Tablet.png)
+
+![Treatments Page Mobile Wireframe](/docs/wireframes/Treatments-Mobile.png)
 
 ### Features
+
 
 
 #### Future features
