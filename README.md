@@ -99,6 +99,12 @@ Features to be included:
 
 ![Treatments Page Mobile Wireframe](/docs/wireframes/Treatments-Mobile.png)
 
+#### Database Schema
+
+![Database Schema](/docs/images/database-schema.png)
+
+* The Life Dentals project makes use of 3 custom models - Booking, Treatment and User. The screenshot displays an extra custom model - Testimonials - which I was unable to implement due to time restraints. A user profile is required in order to create a booking. The treatments model is then also linked to the booking model so that when users create a booking, they can choose from all available bookings that are stored within the databse.
+
 ### Features
 
 
