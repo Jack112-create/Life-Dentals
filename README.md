@@ -222,5 +222,15 @@ Test Cases:
 
 ### Deployment
 
+#### Creating a clone of the repository
+
+  1. Navigate to the Life Dentals Repository (https://github.com/Jack112-create/Life-Dentals).
+  2. Click on the "Code" dropdown.
+  3. Copy either the HTTPS or SSH clink.
+  4. Navigate to the directory on your local machine where you would like the project to be cloned into.
+  5. Type "git clone", and paste the link that you copied from the remote repository.
+  6. To run the project locally, you must install the requirements.txt file. This can be done by typing "pip3 install -r requirements.txt".
+
+#### Deployment onto Heroku
 
 ### Credits
