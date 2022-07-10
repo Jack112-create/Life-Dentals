@@ -133,6 +133,8 @@ Features to be included:
 
 #### Homepage
 
+![Homepage Live Screenshot](/docs/images/homepage-live.png)
+
 - The homepage is the first page the user is directed to when visiting Life Dentals. The homepage provides users with basic details about Life Dentals, such as - details about the members of staff, the Life Dentals vision and a link for the user to create their first booking.
 
 **Site Owner Goal related to this feature:**
@@ -141,6 +143,8 @@ Features to be included:
 
 #### Navigation
 
+![Navbar Live Screenshot](/docs/images/navbar-live.png)
+
 - The navbar is fully responsive and correctly links to the appropriate pages provided within the navigation. The responsiveness of the navbar provides users to be able to naviagte throughout the site no matter what device they use.
 
 **User stories related to this feature:**
@@ -148,6 +152,8 @@ Features to be included:
 * As a user, I want to a clear form of navigation so that I can navigate through the site more easily.
 
 #### Treatments Page
+
+![Treatments Live Screenshot](/docs/images/treatments-live.png)
 
 - The treatments page provides users with information about the available treatments at Life Dentals. Information includes: treatment name, priceand procedure duration. Patient testimonials are also present at the bottom of the page so that users can read about some of the patient experiences.
 
@@ -159,6 +165,8 @@ Features to be included:
 
 #### Contact Page
 
+![Contact Live Screenshot](/docs/images/contact-live.png)
+
 - The contact page allows users to get in contact with the Life Dentals staff by sending them a message through the contact form. Once a user has filled in the required fields, they can send their query which will be received by the Life Dental email.
 
 **User stories related to this feature:**
@@ -167,6 +175,10 @@ Features to be included:
 
 #### Register & Login
 
+![Register Live Screenshot](/docs/images/register-live.png)
+
+![Login Live Screenshot](/docs/images/login-live.png)
+
 - Depending on if a user has created an account or not - they will be shown different links within the sites main navigation. If a user is signed in, the "booking" navigation link will appear, and the "login" navigation link changes to "logout".
 
 - The register page provides the user with a form to register for an account. The form requires to fill in multiple fields - which upon a successful completion - will grant the user access to create a booking.
@@ -174,6 +186,20 @@ Features to be included:
 **User stories related to this feature:**
 
 * As a user, I want to be able to register and log in so that I can view my bookings.
+
+#### Booking
+
+![Create Booking Live Screenshot](/docs/images/create-booking-live.png)
+
+- The create booking page provides the user with a form to create their own booking by selecting a time, date and treatment. Each time the user selects a different date the available time slots for the date they have chosen will be displayed to them.
+
+![Edit Booking Live screenshot](/docs/images/edit-booking-live.png)
+
+- The edit booking page allows the user to update/edit their booking. This allows the user to change the date, time or treatment of their pre-existing booking.
+
+![Delete Booking Live Screenshot](/docs/images/delete-booking-live.png)
+
+- The delete booking page gives the user the ability to delete their booking. When the user clicks the "delete button", they are prompted with a message that asks if they would like to continue with the deletion.
 
 ### Future features
 
