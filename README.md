@@ -74,15 +74,15 @@ Features to be included:
 
 *  #### Design
 
-    * Colours
-      - ![Colour Palette](/docs/images/colour-palette-1.png)
-      - ![Colour Palette](/docs/images/colour-palette-2.png)
+  * Colours
+    - ![Colour Palette](/docs/images/colour-palette-1.png)
+    - ![Colour Palette](/docs/images/colour-palette-2.png)
 
-    * Icons:
-      - Font Awesome was used to add icons to multiple sections throughout the site, such as the employee section on the homepage and the footer.
+  * Icons:
+    - Font Awesome was used to add icons to multiple sections throughout the site, such as the employee section on the homepage and the footer.
 
-    * Typography:
-      - Google Fonts was used to add the "Assistant" font to the project. The "Assistant" font family was chosen as I felt it added to the simple yet visual aesthetic.
+  * Typography:
+    - Google Fonts was used to add the "Assistant" font to the project. The "Assistant" font family was chosen as I felt it added to the simple yet visual aesthetic.
 
 #### Wireframes
 * Balsamiq was used for this project. Balsamiq allowed me to create mockup designs for each feature and layout for this project.
@@ -107,9 +107,49 @@ Features to be included:
 
 ### Features
 
+#### Homepage
 
+![Homepage Desktop Wireframe](/docs/wireframes/Homepage-Desktop.png)
 
-#### Future features
+- The homepage is the first page the user is directed to when visiting Life Dentals. The homepage provides users with basic details about Life Dentals, such as - details about the members of staff, the Life Dentals vision and a link for the user to create their first booking.
+
+**Site Owner Goal related to this feature:**
+
+* As a site owner, I want to provide users with a visually appealing website so that they have a positive user experience when browsing the site.
+
+#### Navigation
+
+![Navbar screenshot](/docs/wireframes/Navbar.png)
+
+- The navbar is fully responsive and correctly links to the appropriate pages provided within the navigation. The responsiveness of the navbar provides users to be able to naviagte throughout the site no matter what device they use.
+
+**User stories related to this feature:**
+
+* As a user, I want to a clear form of navigation so that I can navigate through the site more easily.
+
+#### Treatments Page
+
+![Treatments Page Desktop Wireframe](/docs/wireframes/Treatments-Desktop.png)
+
+- The treatments page provides users with information about the available treatments at Life Dentals. Information includes: treatment name, priceand procedure duration. Patient testimonials are also present at the bottom of the page so that users can read about some of the patient experiences.
+
+**User stories related to this feature:**
+
+* As a user, I want to view all available treatments so that I can choose the appropriate booking.
+
+* As a user, I want to read any testimonials so that I can read people's opinions and experiences of the provided service.
+
+#### Contact Page
+
+![Contact Page Desktop Wireframe](/docs/wireframes/Contact-Desktop.png)
+
+- The contact page allows users to get in contact with the Life Dentals staff by sending them a message through the contact form. Once a user has filled in the required fields, they can send their query which will be received by the Life Dental email.
+
+**User stories related to this feature:**
+
+* As a user, I want to have access to contact information, so that I can get in touch with the clinic.
+
+### Future features
 
 
 ### Technologies
