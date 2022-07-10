@@ -99,6 +99,30 @@ Features to be included:
 
 ![Treatments Page Mobile Wireframe](/docs/wireframes/Treatments-Mobile.png)
 
+![Contact Page Desktop Wireframe](/docs/wireframes/Contact-Desktop.png)
+
+![Contact Page Tablet Wireframe](/docs/wireframes/Contact-Tablet.png)
+
+![Contact Page Mobile Wireframe](/docs/wireframes/Contact-Mobile.png)
+
+![Login Page Desktop Wireframe](/docs/wireframes/Login-Desktop.png)
+
+![Login Page Tablet Wireframe](/docs/wireframes/Login-Tablet.png)
+
+![Login Page Mobile Wireframe](/docs/wireframes/Login-Mobile.png)
+
+![Booking Page Desktop Wireframe](/docs/wireframes/Booking-Desktop.png)
+
+![Booking Page Tablet Wireframe](/docs/wireframes/Booking-Tablet.png)
+
+![Booking Page Mobile Wireframe](/docs/wireframes/Booking-Mobile.png)
+
+![Booking Form Desktop Wireframe](/docs/wireframes/BookingForm-Desktop.png)
+
+![Booking Form Tablet Wireframe](/docs/wireframes/BookingForm-Tablet.png)
+
+![Booking Form Mobile Wireframe](/docs/wireframes/BookingForm-Mobile.png)
+
 #### Database Schema
 
 ![Database Schema](/docs/images/database-schema.png)
@@ -109,8 +133,6 @@ Features to be included:
 
 #### Homepage
 
-![Homepage Desktop Wireframe](/docs/wireframes/Homepage-Desktop.png)
-
 - The homepage is the first page the user is directed to when visiting Life Dentals. The homepage provides users with basic details about Life Dentals, such as - details about the members of staff, the Life Dentals vision and a link for the user to create their first booking.
 
 **Site Owner Goal related to this feature:**
@@ -119,8 +141,6 @@ Features to be included:
 
 #### Navigation
 
-![Navbar screenshot](/docs/wireframes/Navbar.png)
-
 - The navbar is fully responsive and correctly links to the appropriate pages provided within the navigation. The responsiveness of the navbar provides users to be able to naviagte throughout the site no matter what device they use.
 
 **User stories related to this feature:**
@@ -128,8 +148,6 @@ Features to be included:
 * As a user, I want to a clear form of navigation so that I can navigate through the site more easily.
 
 #### Treatments Page
-
-![Treatments Page Desktop Wireframe](/docs/wireframes/Treatments-Desktop.png)
 
 - The treatments page provides users with information about the available treatments at Life Dentals. Information includes: treatment name, priceand procedure duration. Patient testimonials are also present at the bottom of the page so that users can read about some of the patient experiences.
 
@@ -141,13 +159,21 @@ Features to be included:
 
 #### Contact Page
 
-![Contact Page Desktop Wireframe](/docs/wireframes/Contact-Desktop.png)
-
 - The contact page allows users to get in contact with the Life Dentals staff by sending them a message through the contact form. Once a user has filled in the required fields, they can send their query which will be received by the Life Dental email.
 
 **User stories related to this feature:**
 
 * As a user, I want to have access to contact information, so that I can get in touch with the clinic.
+
+#### Register & Login
+
+- Depending on if a user has created an account or not - they will be shown different links within the sites main navigation. If a user is signed in, the "booking" navigation link will appear, and the "login" navigation link changes to "logout".
+
+- The register page provides the user with a form to register for an account. The form requires to fill in multiple fields - which upon a successful completion - will grant the user access to create a booking.
+
+**User stories related to this feature:**
+
+* As a user, I want to be able to register and log in so that I can view my bookings.
 
 ### Future features
 
