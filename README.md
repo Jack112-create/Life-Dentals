@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Life Dentals is a full stack web application built for the purpose of allowing users to book in for a dental service with the fictional organisation. Life Dentals is my fourth portfolio project with Code Institute.
+Life Dentals is a full stack web application built for the purpose of allowing users to book in for a dental service with the fictional organization. Life Dentals is my fourth portfolio project with Code Institute.
 
 ![Screenshot of responsive site](./docs/images/responsive-screenshot.png)
 
@@ -23,7 +23,7 @@ The link to the live version of this project can be found [here](https://life-de
     * [Bugs](#Bugs)
     * [Deployment](#Deployment)
     * [Credits](#Credits)
-    
+
 
 ## UX
 
@@ -61,7 +61,7 @@ The link to the live version of this project can be found [here](https://life-de
 
 Features to be included:
 
-* Responsive Design - The site should function correctly on all screen sizes. The design should allow users to have a good experience when visitng the site no matter what device they use when visiting.
+* Responsive Design - The site should function correctly on all screen sizes. The design should allow users to have a good experience when visiting the site no matter what device they use when visiting.
 
 * Navigation -  Navigation elements should be clear to the user. The main site navigation should be clear to the user that the links will bring them to other pages on the site.
 
@@ -127,7 +127,7 @@ Features to be included:
 
 ![Database Schema](/docs/images/database-schema.png)
 
-* The Life Dentals project makes use of 3 custom models - Booking, Treatment and User. The screenshot displays an extra custom model - Testimonials - which I was unable to implement due to time restraints. A user profile is required in order to create a booking. The treatments model is then also linked to the booking model so that when users create a booking, they can choose from all available bookings that are stored within the databse.
+* The Life Dentals project makes use of 3 custom models - Booking, Treatment and User. The screenshot displays an extra custom model - Testimonials - which I was unable to implement due to time restraints. A user profile is required in order to create a booking. The treatments model is then also linked to the booking model so that when users create a booking, they can choose from all available bookings that are stored within the database.
 
 ### Features
 
@@ -145,7 +145,7 @@ Features to be included:
 
 ![Navbar Live Screenshot](/docs/images/navbar-live.png)
 
-- The navbar is fully responsive and correctly links to the appropriate pages provided within the navigation. The responsiveness of the navbar provides users to be able to naviagte throughout the site no matter what device they use.
+- The navbar is fully responsive and correctly links to the appropriate pages provided within the navigation. The responsiveness of the navbar provides users to be able to navigate throughout the site no matter what device they use.
 
 **User stories related to this feature:**
 
@@ -155,7 +155,7 @@ Features to be included:
 
 ![Treatments Live Screenshot](/docs/images/treatments-live.png)
 
-- The treatments page provides users with information about the available treatments at Life Dentals. Information includes: treatment name, priceand procedure duration. Patient testimonials are also present at the bottom of the page so that users can read about some of the patient experiences.
+- The treatments page provides users with information about the available treatments at Life Dentals. Information includes: treatment name, price and procedure duration. Patient testimonials are also present at the bottom of the page so that users can read about some of the patient experiences.
 
 **User stories related to this feature:**
 
