@@ -203,6 +203,14 @@ Features to be included:
 
 ### Future features
 
+- Admin users having the ability to update and delete bookings created by regular users. Admin users would be able to search for a specific booking by filtering the bookings by username, date, time or treatment. Unfortunately, due to time restraints, I was unable to implement this feature into the project.
+
+![Admin Booking Wireframe Desktop](/docs/wireframes/AdminBooking-Desktop.png)
+
+![Admin Booking Wireframe Tablet](/docs/wireframes/AdminBooking-Tablet.png)
+
+![Admin Booking Wireframe Mobile](/docs/wireframes/AdminBooking-Mobile.png)
+
 
 ### Technologies
 
