@@ -231,6 +231,76 @@ Test Cases:
   5. Type "git clone", and paste the link that you copied from the remote repository.
   6. To run the project locally, you must install the requirements.txt file. This can be done by typing "pip3 install -r requirements.txt".
 
-#### Deployment onto Heroku
+#### Workspace setup & Deployment onto Heroku
+
+  **Workspace Setup:**
+
+  1. Navigate to the Code Institue Template - https://github.com/Code-Institute-Org/gitpod-full-template
+  2. Click the "Use this template" button.
+  3. Enter your repository name and click the "Create repository from template" button.
+  4. Once you are redirected to your new repository, click the green "Gitpod" button.
+  5. Open up the terminal in your new Gitpod workspace and run the following commands:
+    - pip3 install django == 3.2
+    - pip3 install gunicorn
+    - pip3 install dj_database_url 
+    - pip3 install psycopg2
+    - pip3 install dj3-cloudinary-storage
+    - pip3 freeze --local > requirements.txt
+  6. Create your Django project by entering the following command:
+    - django-admin startproject < YOUR PROJECT NAME >
+  7. Create a Django app by entering the following command:
+    - python manage.py startapp < YOUR APP NAME >
+  8. Add the newly created app to the "INSTALLED_APPS" list in settings.py
+  9. Migrate the changes by entering the following command:
+    - python manage.py migrate
+  10. Run local server by entering the following command:
+    - python manage.py runserver
+
+  **Creating Heroku App:**
+
+  1. Sign in or log in to Heroku
+  2. Click the "New" button on the dashboard
+  3. Select "Create new app" from the dropdown menu
+  4. Enter your app name and select your region
+  5. Navigate to the "Resources" tab on the dashboard.
+  6. Under the heading "Add ons," enter "Heroku Postgres" into the search field.
+  7. Select the "Heroku Postgress" database option. and click on it when it appears
+  8. Select "Hobby Dev - Free" from the "plan name" drop-down menu and click "Submit Order Form." 
+  9. Navigate back to your Gitpod workspace into settings.py and copy the SECRET_KEY variable
+  10. Navigate back to your Heroku app and into the settings tab.
+  11. Create a new config variable by clicking the "Reveal Config Vars" button
+  12. Enter "SECRET_KEY" into the key field and enter the SECRET_KEY variable value copied from your Django project into the value field.
+
+  **Local Environment Setup:**
+
+  1. Navigate to your Gitpod workspace
+  2. Create a file named "env.py"
+  3. Import the os module
+  4. Create a variable inside the env.py file and name it "DATABASE_URL"
+  5. Navigate to Heroku and into your app. Click the settings tab and then the "Reveal Config Vars" button. Copy the value from the "DATABASE_URL" key on Heroku and paste it into the "DATABASE_URL" variable in your Django project.
+  6. Navigate to your settings.py file and copy the value from the "SECRET_KEY" variable. Create a new variable in your env.py file and name it "SECRET_KEY". Paste the value from the "SECRET_KEY" variable in settings.py into the new "SECRET_KEY" variable in env.py
+  7. Create another variable inside of env.py and name it "CLOUDINARY_URL". Copy the API key from your cloudinary account and paste it into the new variable.
+  8. Navigate to settings.py and add the following lines from the screenshots below:
+
+  - ![Import settings screenshot](/docs/images/imports-settings.png)
+  - ![Apps settings screenshot](/docs/images/apps-settings.png)
+  - ![Database settings screenshot](/docs/images/database-settings.png)
+  - ![Static fiels settings screenshot](/docs/images/static-files-settings.png)
+
+  **Heroku CLI Setup:**
+  1. Navigate to your terminal in your Django project
+  2. Enter the following command:
+    - "heroku login -i"
+  3. Enter your login credentials for Heroku
+  4. Enter the following command:
+    - "heroku apps" and locate your app name
+  5. Enter the following command:
+    - "heroku git:remote -a < YOUR HEROKU APP NAME >"
+  6. Enter the following commands:
+    - "git add ."
+    - "git commit ."
+  7. Push your changes to Heroku by entering the following commands:
+    - "git push origin main"
+    - "git push heroku main"
 
 ### Credits
