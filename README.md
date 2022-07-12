@@ -238,30 +238,70 @@ Features to be included:
 
 ### Testing
 
-* [HTML Validator](https://validator.w3.org/)
+  * [HTML Validator](https://validator.w3.org/)
 
-![HTML Validator Screenshot](/docs/testing/html-validator.png)
+  ![HTML Validator Screenshot](/docs/testing/html-validator.png)
 
-* [CSS Validator](https://jigsaw.w3.org/css-validator/)
+  * [CSS Validator](https://jigsaw.w3.org/css-validator/)
 
-![CSS Validator Screenshot](/docs/testing/css-validator.png)
+  ![CSS Validator Screenshot](/docs/testing/css-validator.png)
 
-* [JS Validator](https://jshint.com/)
+  * [JS Validator](https://jshint.com/)
 
-![JS Validator Screenshot](/docs/testing/messages-js-validator.png)
+  ![JS Validator Screenshot](/docs/testing/messages-js-validator.png)
 
-![JS Validator Screenshot](/docs/testing/navigation-js-validator.png)
+  ![JS Validator Screenshot](/docs/testing/navigation-js-validator.png)
 
-![JS Validator Screenshot](/docs/testing/htmx-js-validator.png)
+  ![JS Validator Screenshot](/docs/testing/htmx-js-validator.png)
 
-     Warnings for the screenshot above are due to the htmx javascript code to configure into Django.
+      Warnings for the screenshot above are due to the htmx javascript code to configure into Django.
 
-* [Python Validator](http://pep8online.com/checkresult)
+  * [Python Validator](http://pep8online.com/checkresult)
 
-![Python Validator Screenshot](/docs/testing/python-validator.png)
+  ![Python Validator Screenshot](/docs/testing/python-validator.png)
 
 #### Manual Testing
-Test Cases:
+  * Contact Form Testing:
+    - The contact form was tested by providing values for each field and clicking the submit button.
+    - The form is sent correctly when the modal appears after submitting the form, and a new email is placed within the connected email inbox.
+    ![Contact Form Test Screenshot](/docs/testing/contact-email-test.png)
+  
+  * Create Booking Form Testing:
+    - The create booking form was tested by providing values for each field and clicking the submit button.
+    - The create booking form was tested by changing the date field value to a date where there are existing bookings. This would prevent any overlapping booking times.
+    - The create booking form was successful when both the success message appears, and a new entry was stored within the database.
+    ![Create Booking Form Test Screenshot](/docs/testing/create-booking-form-test.png)
+    ![Create Booking Form  Test Screenshot](/docs/testing/create-booking-form-instance.png)
+    ![Create Booking Form  Test Screenshot](/docs/testing/create-booking-form-test.png)
+
+  * Edit Booking Form Testing:
+    - The edit booking form was tested by providing values for each field and clicking the submit button.
+    - The edit booking form was tested by changing the date field value to a date where there are existing bookings. This would prevent any overlapping booking times.
+    - The edit booking form was successful when the booking instance was updated in the database.
+    ![Edit Booking Form  Test Screenshot](/docs/testing/edit-booking-form-instance.png)
+    ![Edit Booking Form  Test Screenshot](/docs/testing/create-booking-form-result-test.png)
+
+  * Delete Booking Form Testing:
+    - The delete booking form was tested by clicking the delete button.
+    - The delete booking form was successful when the booking entry was removed from database.
+    ![Delete Booking Form Test Screenshot](/docs/testing/delete-booking-prompt.png)
+    ![Delete Booking Form Test Screenshot](/docs/testing/delete-booking-prompt-result.png)
+
+  * Create User Form Testing:
+    - The create user form was tested by providing values for each field and clicking the submit button.
+    - The create user form booking form was successful when the user instance was added to the database.
+    - The create user form booking form was successful when the user is redirected to the booking page.
+
+    ![Create User Form Test Screenshot](/docs/testing/sign-up-form-test.png)
+    ![Create User Form Test Screenshot](/docs/testing/new-user-instance.png)
+
+    * Login User Form Testing:
+    - The login user form was tested by providing values for each field and clicking the submit button.
+    - The login user form booking form was successful when the user is redirected to the booking page and the login navigation link is changed to logout.
+    - The login user form booking form was successful when the user is redirected to the booking page.
+
+    ![Login User Form Test Screenshot](/docs/testing/login-form-test.png)
+    ![Login User Form Test Screenshot](/docs/testing/login-user-features.png)
 
 
 ### Bugs
