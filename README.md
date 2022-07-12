@@ -236,9 +236,6 @@ Features to be included:
   * JavaScript
     - Javascript added interactivity to the project. The navigation menu utilizes javascript to add the open and close menu functionality on mobile devices. 
 
-
-
-
 ### Testing
 
 
@@ -336,3 +333,9 @@ Test Cases:
     - "git push heroku main"
 
 ### Credits
+  * Balsamiq was used to create the wireframes
+  * [Unsplash provided images](https://unsplash.com/) provided the images used in this project
+  * [Pexels](https://www.pexels.com/) provided the images used in this project
+  * [Am I Responsive](http://ami.responsivedesign.is/) is used to display responsiveness on different devices.
+  * [Favicon.io](https://favicon.io/) is used to generate the site favicon.
+  * [HTMX](https://django-htmx.readthedocs.io/en/latest/) allows me to inject dynamic time slot data into the form pages whenever a user changes the date field.
