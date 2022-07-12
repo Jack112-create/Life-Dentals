@@ -212,6 +212,31 @@ Features to be included:
 
 
 ### Technologies
+  * Python
+    - Python (along with pip) - was used to install the packages required for this project.
+
+  * Pip3 Packages:
+    - asgiref==3.5.0
+    - cloudinary==1.29.0
+    - dj-database-url==0.5.0
+    - dj3-cloudinary-storage==0.0.6
+    - Django==3.2
+    - django-htmx==1.12.0
+    - gunicorn==20.1.0
+    - psycopg2==2.9.3
+    - pytz==2021.3
+    - sqlparse==0.4.2
+
+  * HTML
+    - HTML was used to structure the content of the web pages.
+
+  * CSS
+    - CSS was used to add responsive styles for each page.
+
+  * JavaScript
+    - Javascript added interactivity to the project. The navigation menu utilizes javascript to add the open and close menu functionality on mobile devices. 
+
+
 
 
 ### Testing
