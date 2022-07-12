@@ -238,6 +238,27 @@ Features to be included:
 
 ### Testing
 
+* [HTML Validator](https://validator.w3.org/)
+
+![HTML Validator Screenshot](/docs/testing/html-validator.png)
+
+* [CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+![CSS Validator Screenshot](/docs/testing/css-validator.png)
+
+* [JS Validator](https://jshint.com/)
+
+![JS Validator Screenshot](/docs/testing/messages-js-validator.png)
+
+![JS Validator Screenshot](/docs/testing/navigation-js-validator.png)
+
+![JS Validator Screenshot](/docs/testing/htmx-js-validator.png)
+
+     Warnings for the screenshot above are due to the htmx javascript code to configure into Django.
+
+* [Python Validator](http://pep8online.com/checkresult)
+
+![Python Validator Screenshot](/docs/testing/python-validator.png)
 
 #### Manual Testing
 Test Cases:
