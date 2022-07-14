@@ -1,7 +1,7 @@
 const config = {
     Service_ID: "service_5g6p9f6",
     templateID : 'template_4oknqyt',
-    publicKey : '9Q-Mt9R1mAeKAjqHQ',
+    publicKey : '9Q-Mt9R1mAeKAjqHQ', // This is the public key supplied by EmailJS
 };
 
 (function() {
