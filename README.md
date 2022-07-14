@@ -27,6 +27,10 @@ The link to the live version of this project can be found [here](https://life-de
 
 ## UX
 
+### Trello Board
+
+* Link to Trello Board can be found [here](https://trello.com/b/h5hVnl6V/p4-tasks)
+
 ### Site Goals
 
 * As a site owner, I want to provide a service to people looking to receive oral care so that they can improve their oral health.
@@ -306,8 +310,9 @@ Features to be included:
 
 ### Bugs
 
+* Users can book times in the past. Unfortunately due to time restraints I was unable to fix this bug. The changes not added to the final project of attempting to fix the bug is provided below.
 
-#### Fixed Bugs
+* [Past Time Bug Fix Attempt](/docs/bugs/booking.txt)
 
 
 ### Deployment
