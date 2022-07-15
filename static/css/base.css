@@ -45,6 +45,11 @@ body {
     align-items: center;
 }
 
+.nav-header a {
+    color: var(--ui-grey);
+    text-decoration: none;
+}
+
 .nav-toggle {
     border: transparent;
     background: transparent;
